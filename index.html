@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      @media (min-width: 992px) {
+        .custom-center-navbar {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        .navbar .container.position-relative {
+          position: relative;
+        }
+      }
+    </style>
+
+    <title>DrTeeth - Diş Sağlığı</title>
+  </head>
+  <body>
+    <!-- Bootstrap Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container position-relative">
+        <!-- Navbar Brand -->
+        <a class="navbar-brand" href="#">DrTeeth</a>
+        
+        <!-- Hamburger Menu Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Navbar Items -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+          <ul class="navbar-nav custom-center-navbar">
+            <li class="nav-item mx-1">
+              <a class="nav-link  border rounded-pill px-4 py-1 active" aria-current="page" href="#">Ana Sayfa</a>
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link border rounded-pill px-4 py-1" href="#">Hizmetler</a>
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link border rounded-pill px-4 py-1" href="#">Doktorlar</a>
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link border rounded-pill px-4 py-1" href="#">Randevu</a>
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link border rounded-pill px-4 py-1" href="#">İletişim</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-4">
+      <h1>DrTeeth'e Hoş Geldiniz</h1>
+      <p class="lead">Sağlıklı gülüşler için profesyonel diş bakım hizmetleri.</p>
+    </div>
+
+    <!-- Popper and Bootstrap JS -->
+    <script
+      src="js/bootstrap.bundle.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
