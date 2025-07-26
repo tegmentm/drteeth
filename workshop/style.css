@@ -1,0 +1,33 @@
+     
+:root{
+    --color-dark: #232323;
+    --color-light: #f6f6f6;
+    --color-green: #01CD8C;
+}
+
+
+
+
+
+
+* {
+   font-family: "DM Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal; 
+}
+
+.rounded-4{border-radius:1.7rem!important}
+
+
+
+@media (min-width: 992px) {
+          .custom-center-navbar {
+              position: absolute;
+              left: 50%;
+              transform: translateX(-50%);
+          }
+
+          .navbar .container.position-relative {
+              position: relative;
+          }
+      }
