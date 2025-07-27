@@ -1,33 +1,111 @@
-     
-:root{
-    --color-dark: #232323;
-    --color-light: #f6f6f6;
-    --color-green: #01CD8C;
+     :root {
+         --color-dark: #232323;
+         --color-light: #f6f6f6;
+         --color-green: #01CD8C;
+     }
+
+
+
+
+
+
+     * {
+         font-family: "DM Sans", sans-serif;
+         font-optical-sizing: auto;
+         font-style: normal;
+     }
+
+     .rounded-4 {
+         border-radius: 1.7rem !important
+     }
+
+
+
+     @media (min-width: 992px) {
+         .custom-center-navbar {
+             position: absolute;
+             left: 50%;
+             transform: translateX(-50%);
+         }
+
+         .navbar .container.position-relative {
+             position: relative;
+         }
+     }
+
+
+     .navbar-brand img {
+         height: 40px;
+     }
+
+     /* Navbar öğelerini tam ortalama */
+     .navbar-collapse {
+         position: relative;
+     }
+
+     .navbar-nav {
+         position: absolute;
+         left: 50%;
+         transform: translateX(-50%);
+     }
+
+     /* Randevu butonu için boşluk */
+     .navbar-randevu {
+         margin-left: auto;
+     }
+
+     /* Navbar linkleri için özel stiller */
+     .navbar-nav .nav-link {
+         border: 1px solid rgba(0, 0, 0, 0.1);
+         /* Silik border */
+         border-radius: 50rem !important;
+         /* rounded-pill */
+         padding: 0.4rem 1rem !important;
+         margin: 0 0.2rem !important;
+         transition: all 0.3s ease;
+     }
+
+     /* Hover efekti */
+     .navbar-nav .nav-link:hover {
+         border-color: rgba(0, 0, 0, 0.3);
+         background-color: rgba(0, 0, 0, 0.03);
+     }
+
+     /* Active link efekti */
+     .navbar-nav .nav-item .nav-link.active {
+         border-color: rgba(0, 0, 0, 0.5);
+         background-color: rgba(0, 0, 0, 0.05);
+         font-weight: 500;
+     }
+
+     /* Randevu butonu stil */
+     .navbar-randevu .btn {
+         border-radius: 50rem !important;
+         padding-left: 1.2rem;
+         padding-right: 1.2rem;
+     }
+
+     /* Mobilde ortalamayı kaldırma */
+     @media (max-width: 991.98px) {
+         .navbar-nav {
+             position: static;
+             left: auto;
+             transform: none;
+             text-align: center;
+         }
+
+         .navbar-nav .nav-link {
+             margin: 0.2rem auto !important;
+             display: inline-block;
+         }
+
+         .navbar-randevu {
+             margin: 10px auto 0;
+             display: block;
+             width: fit-content;
+         }
+     }
+
+.bg-custom-light {
+    background-color: var(--color-light);
 }
-
-
-
-
-
-
-* {
-   font-family: "DM Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal; 
-}
-
-.rounded-4{border-radius:1.7rem!important}
-
-
-
-@media (min-width: 992px) {
-          .custom-center-navbar {
-              position: absolute;
-              left: 50%;
-              transform: translateX(-50%);
-          }
-
-          .navbar .container.position-relative {
-              position: relative;
-          }
-      }
