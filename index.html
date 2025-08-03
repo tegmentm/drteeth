@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap 5 Başlangıç Teması</title>
+    
+    <title>Dr Teeth | Dental Clinic</title>
+    
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    
+
     <!-- Font Connection -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
-    
+
     <!-- CSS Connection -->
     <link rel="stylesheet" href="css/style.css">
-    
+
     <style>
 
     </style>
 </head>
+
 <body>
 
     <!-- Navbar -->
@@ -28,14 +33,14 @@
         <div class="container">
             <!-- Logo (sola yaslı) -->
             <a class="navbar-brand" href="#">
-                <img src="https://via.placeholder.com/150x50?text=LOGO" alt="Logo">
+                <img src="img/drteeth_logo.png" alt="Logo">
             </a>
-            
+
             <!-- Mobil menü butonu -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            
+
             <!-- Menü öğeleri -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
@@ -52,10 +57,10 @@
                         <a class="nav-link" href="#">İletişim</a>
                     </li>
                 </ul>
-                
+
                 <!-- Randevu butonu (sağa yaslı) -->
                 <div class="navbar-randevu">
-                    <a href="#" class="btn btn-primary">
+                    <a href="#" class="btn btn-dark">
                         <i class="bi bi-calendar-check"></i> Randevu Al
                     </a>
                 </div>
@@ -66,14 +71,87 @@
     <!-- İçerik bölümü -->
     <main class="container-fluid my-1">
         <div class="row p-2 p-md-4 ">
-            <div class="col-12 bg-custom-light rounded-4 p-4 vh-50">
-                <h1>Hoş Geldin</h1>
-                <p>Navbar öğelerine yuvarlak köşeler ve border efektleri eklendi.</p>
+            <div class="col-12 bg-custom-light rounded-4 p-4" style="background: url('img/bg-reflect-2.png') no-repeat right center; background-size: 50%; background-color: #f6f6f6; min-height: 75vh;">
+
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="row">
+                            <h1 class="display-8 lh-1"><span class="text-green">Diş Tedavisinde</span><br>Kusursuz Hizmet</h1>
+
+                        </div>
+
+                    </div>
+                    <div class="col-md-2 text-end">
+                        <p>
+                            <strong>
+                                Ağustos 24, 2025
+                            </strong>
+                        </p>
+                        <p>
+                            Bugün 08:00 - 17:00 Saatlerinde Hizmetinizdeyiz.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="p-md-5 col-md-5">
+                        <p>Deneyimli diş hekimlerimizden oluşan ekibimiz ve güncel teknolojik ekipmanlarla, konforlu ve samimi bir ortamda kapsamlı tedaviler sunuyoruz.</p>
+                        <a href="#" class="btn px-3 py-2 btn-light border rounded-pill mx-auto">
+                            <i class="bi bi-calendar-check"></i> Randevu Al
+                        </a>
+                    </div>
+                    <div class="col-md-5 ms-md-auto mt-md-auto">
+                        <div class="row">
+                            <div class="col-4">
+                                <p class="display-4">
+                                    1650<span class="text-green">+</span>
+                                </p>
+                            </div>
+                            <div class="col-8">
+                                <p>
+                                    Sayıları 1650'yi aşan hastamıza uyguladığımız tedavilerimizle, şahane gülümsemelere destek olmanın mutlu gururunu yaşıyoruz
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
+        
+        <div class="row p-2 p-md-4">
+           
+            <div class="col-md-6">
+               <div class="row">
+                   <h2 class="display-3">Hakkımızda</h2>
+               </div>
+                <div class="row">
+                    <div class="col-6">
+                        <a href="https://example.com" class="text-decoration-none text-dark">
+                            <div class="card-hover bg-light rounded-4 p-4 shadow-sm position-relative" style="width: 200px; height: 200px;">
+
+                                <!-- Ok İkonu -->
+                                <i class="bi bi-arrow-up-right position-absolute top-0 end-0 m-3 fs-2 icon-hover-move"></i>
+
+                                <!-- Yazı -->
+                                <div class="mt-5 fw-normal display-5">
+                                    <span>Skilled <br> Dentists</span>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6"></div>
+        </div>
+        
     </main>
 
     <!-- Bootstrap 5 JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>

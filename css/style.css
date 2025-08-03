@@ -6,9 +6,6 @@
 
 
 
-
-
-
      * {
          font-family: "DM Sans", sans-serif;
          font-optical-sizing: auto;
@@ -106,6 +103,27 @@
          }
      }
 
-.bg-custom-light {
-    background-color: var(--color-light);
-}
+     .bg-custom-light {
+         background-color: var(--color-light);
+     }
+
+     .btn-custom-dark {
+         background-color: var(--color-dark);
+     }
+
+     .text-green {
+         color: var(--color-green);
+     }
+
+     .display-8 {
+         font-size: 8rem;
+         font-weight: 400;
+     }
+
+.icon-hover-move {
+      transition: transform 0.3s ease;
+    }
+
+    .card-hover:hover .icon-hover-move {
+      transform: translate(6px, -6px);
+    }
