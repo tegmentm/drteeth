@@ -127,3 +127,10 @@
     .card-hover:hover .icon-hover-move {
       transform: translate(6px, -6px);
     }
+#bg-second {
+    background-image: url('../img/dentist-clinic-bg.jpeg');
+  background-size: cover;
+  background-position: center;
+  flex: 1;             /* Kalan alanı tamamen doldurur */
+  min-height: 300px;   /* Mobil için minimum yükseklik (opsiyonel) */
+}
