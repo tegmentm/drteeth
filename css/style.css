@@ -144,3 +144,49 @@
 .hover-dark:hover {
         color: #212529 !important; /* Bootstrap'in dark rengi */
     }
+
+/* Diş Hekimi Kart Stilleri */
+    .doctor-card {
+        height: 300px;
+        transition: all 0.4s ease;
+        background-color: #f8f9fa;
+    }
+    
+    .doctor-card:hover {
+        height: 350px;
+    }
+    
+    .grayscale {
+        filter: grayscale(100%);
+        transition: filter 0.4s ease;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .doctor-card:hover .grayscale {
+        filter: grayscale(0%);
+    }
+    
+    .doctor-info {
+        position: absolute;
+        bottom: -100px;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.9);
+        transition: all 0.4s ease;
+    }
+    
+    .doctor-card:hover .doctor-info {
+        bottom: 0;
+    }
+    
+    .doctor-name {
+        color: #212529;
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .doctor-specialty {
+        color: #6c757d;
+        font-size: 0.9rem;
+    }
