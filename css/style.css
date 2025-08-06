@@ -136,3 +136,11 @@
 }
 
 
+
+.hover-dark {
+        transition: color 0.3s ease;
+    }
+
+.hover-dark:hover {
+        color: #212529 !important; /* Bootstrap'in dark rengi */
+    }
