@@ -120,73 +120,93 @@
          font-weight: 400;
      }
 
-.icon-hover-move {
-      transition: transform 0.3s ease;
-    }
+     .icon-hover-move {
+         transition: transform 0.3s ease;
+     }
 
-    .card-hover:hover .icon-hover-move {
-      transform: translate(6px, -6px);
-    }
-#bg-second {
-    background-image: url('../img/dentist-clinic-bg.jpeg');
-  background-size: cover;
-  background-position: center;
-  flex: 1;             /* Kalan alanı tamamen doldurur */
-  min-height: 300px;   /* Mobil için minimum yükseklik (opsiyonel) */
+     .card-hover:hover .icon-hover-move {
+         transform: translate(6px, -6px);
+     }
+
+     #bg-second {
+         background-image: url('../img/dentist-clinic-bg.jpeg');
+         background-size: cover;
+         background-position: center;
+         flex: 1;
+         /* Kalan alanı tamamen doldurur */
+         min-height: 300px;
+         /* Mobil için minimum yükseklik (opsiyonel) */
+     }
+
+
+
+     .hover-dark {
+         transition: color 0.3s ease;
+     }
+
+     .hover-dark:hover {
+         color: #212529 !important;
+         /* Bootstrap'in dark rengi */
+     }
+
+     /* Diş Hekimi Kart Stilleri */
+     .doctor-card {
+         height: 300px;
+         transition: all 0.4s ease;
+         background-color: #f8f9fa;
+     }
+
+     .doctor-card:hover {
+         height: 350px;
+     }
+
+     .grayscale {
+         filter: grayscale(100%);
+         transition: filter 0.4s ease;
+         height: 100%;
+         object-fit: cover;
+     }
+
+     .doctor-card:hover .grayscale {
+         filter: grayscale(0%);
+     }
+
+     .doctor-info {
+         position: absolute;
+         bottom: -100px;
+         left: 0;
+         right: 0;
+         background: rgba(255, 255, 255, 0.9);
+         transition: all 0.4s ease;
+     }
+
+     .doctor-card:hover .doctor-info {
+         bottom: 0;
+     }
+
+     .doctor-name {
+         color: #212529;
+         font-size: 1.25rem;
+         margin-bottom: 0.5rem;
+     }
+
+     .doctor-specialty {
+         color: #6c757d;
+         font-size: 0.9rem;
+     }
+
+     .contact-item {
+         padding: 1.5rem;
+         margin-bottom: 1rem;
+         border-left: 4px solid var(--color-green);
+         background-color: #f8f9fa;
+     }
+
+     .contact-icon {
+         font-size: 1.5rem;
+         margin-right: 1rem;
+         color: var(--color-green);
+     }
+.color-inherit {
+    color: inherit;
 }
-
-
-
-.hover-dark {
-        transition: color 0.3s ease;
-    }
-
-.hover-dark:hover {
-        color: #212529 !important; /* Bootstrap'in dark rengi */
-    }
-
-/* Diş Hekimi Kart Stilleri */
-    .doctor-card {
-        height: 300px;
-        transition: all 0.4s ease;
-        background-color: #f8f9fa;
-    }
-    
-    .doctor-card:hover {
-        height: 350px;
-    }
-    
-    .grayscale {
-        filter: grayscale(100%);
-        transition: filter 0.4s ease;
-        height: 100%;
-        object-fit: cover;
-    }
-    
-    .doctor-card:hover .grayscale {
-        filter: grayscale(0%);
-    }
-    
-    .doctor-info {
-        position: absolute;
-        bottom: -100px;
-        left: 0;
-        right: 0;
-        background: rgba(255, 255, 255, 0.9);
-        transition: all 0.4s ease;
-    }
-    
-    .doctor-card:hover .doctor-info {
-        bottom: 0;
-    }
-    
-    .doctor-name {
-        color: #212529;
-        font-size: 1.25rem;
-        margin-bottom: 0.5rem;
-    }
-    
-    .doctor-specialty {
-        color: #6c757d;
-        font-size: 0.9rem;
-    }
