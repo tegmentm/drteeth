@@ -210,3 +210,41 @@
 .color-inherit {
     color: inherit;
 }
+
+/* Temel Harita Stili */
+    .map-responsive {
+        position: relative;
+        height: 100%;
+    }
+    
+    .map-responsive::before {
+        content: "";
+        display: block;
+        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    }
+    
+    .map-responsive iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    
+    /* Mobil Uyumluluk */
+    @media (max-width: 768px) {
+        .map-responsive {
+            margin-top: 1.5rem;
+            min-height: 300px;
+        }
+        .map-responsive::before {
+            padding-top: 75%; /* Mobilde daha dik aspect ratio */
+        }
+    }
+    
+    /* Koyu Tema Desteği */
+    @media (prefers-color-scheme: dark) {
+        .map-responsive iframe {
+            filter: brightness(1.0) contrast(1.1) grayscale(30%);
+        }
+    }
