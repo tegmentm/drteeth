@@ -120,6 +120,17 @@
          font-weight: 400;
      }
 
+
+    /* Mobile responsive adjustments */
+    @media (max-width: 767.98px) {
+        .display-8 {
+            font-size: 4rem !important; /* Smaller font size for mobile */
+            font-weight: 500;
+        }
+    }
+
+
+
      .icon-hover-move {
          transition: transform 0.3s ease;
      }
