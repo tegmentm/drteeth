@@ -121,13 +121,14 @@
      }
 
 
-    /* Mobile responsive adjustments */
-    @media (max-width: 767.98px) {
-        .display-8 {
-            font-size: 4rem !important; /* Smaller font size for mobile */
-            font-weight: 500;
-        }
-    }
+     /* Mobile responsive adjustments */
+     @media (max-width: 767.98px) {
+         .display-8 {
+             font-size: 4rem !important;
+             /* Smaller font size for mobile */
+             font-weight: 500;
+         }
+     }
 
 
 
@@ -317,6 +318,22 @@
              font-size: 1.2rem;
          }
      }
-.text-shadow-light {
-    text-shadow: 1px 1px 2px white;
-}
+
+     .text-shadow-light {
+         text-shadow: 1px 1px 2px white;
+     }
+
+     .hero-photo {
+         border-radius: 1.25rem;
+         object-fit: cover;
+         width: 100%;
+         height: clamp(280px, 42vw, 480px);
+     }
+
+     .glass {
+         background: rgba(255, 255, 255, .65);
+         backdrop-filter: blur(6px);
+         -webkit-backdrop-filter: blur(6px);
+         border-radius: 1rem;
+         border: 1px solid rgba(0, 0, 0, .1);
+     }
