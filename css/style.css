@@ -337,3 +337,78 @@
          border-radius: 1rem;
          border: 1px solid rgba(0, 0, 0, .1);
      }
+
+        .dentist-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 2rem;
+            overflow: hidden;
+            border-radius: 10px;
+            border: none;
+        }
+        .dentist-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+        }
+        .dentist-img {
+            object-fit: contain;
+            transition: transform 0.5s;
+        }
+        .dentist-card:hover .dentist-img {
+            transform: scale(1.05);
+        }
+        .card-title {
+            font-weight: 700;
+            border-bottom: 2px solid var(--color-green);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+        .card-text {
+            color: #555;
+            line-height: 1.6;
+        }
+        .text-end .card-title {
+            border-bottom: 2px solid var(--color-green);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        .clinic-info {
+            background-color: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-top: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+        
+        /* Masaüstü görünüm için sabit yükseklik */
+        @media (min-width: 768px) {
+            .dentist-card {
+                height: 400px;
+            }
+            .dentist-img-container {
+                height: 100%;
+            }
+            .dentist-img {
+                height: 100%;
+            }
+        }
+        
+        /* Mobil görünüm için esnek yükseklik */
+        @media (max-width: 767.98px) {
+            .dentist-card {
+                height: auto !important;
+            }
+            .dentist-img-container {
+                height: 300px;
+            }
+            .dentist-img {
+                height: 100%;
+                width: 100%;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+            .text-end {
+                text-align: left !important;
+            }
+        }
