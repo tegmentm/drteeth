@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dr Teeth | Dental Clinic</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- Font Connection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+    <!-- CSS Connection -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <style>
+      .blog-header {
+        background-color: #01CD8C;
+        color: white;
+        padding: 3rem 1rem;
+        text-align: center;
+      }
+      .blog-card {
+        transition: transform .2s ease, box-shadow .2s ease;
+      }
+      .blog-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      }
+      .blog-meta {
+        font-size: 0.9rem;
+        color: #6c757d;
+      }
+      .sidebar .card {
+        border: none;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      }
+      .sidebar .card-title {
+        font-size: 1.1rem;
+        border-bottom: 2px solid #01CD8C;
+        padding-bottom: .5rem;
+      }
+    </style>
+
+
+</head>
+
+<body class="bg-custom-light">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <!-- Logo (sola yaslı) -->
+            <a class="navbar-brand" href="#">
+                <img src="../img//drteeth_logo.png" alt="Logo">
+            </a>
+
+            <!-- Mobil menü butonu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menü öğeleri -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../hakkimizda.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../tedaviler.html">Tedaviler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">İletişim</a>
+                    </li>
+                </ul>
+
+                <!-- Randevu butonu (sağa yaslı) -->
+                <div class="navbar-randevu">
+                    <a href="#" class="btn btn-dark">
+                        <i class="bi bi-calendar-check"></i> Randevu Al
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- İçerik bölümü -->
+    <main class="container-fluid my-1">
+        <div class="row">
+            <div class="col-12 py-4" style="background-image: url(img/hexagons-background-left.png); background-position: left bottom; background-repeat: no-repeat;">
+                <div class="d-flex gap-2 mb-3">
+                    <span class="badge rounded-pill text-bg-light border fw-medium">
+                        <i class="bi bi-arrow-bar-right me-1"></i> Tedaviler
+                        
+                    </span>
+                </div>
+
+                <h1 class="h2 fw-3 display-8 m-0 text-shadpw-light">
+                    <span class="text-green">Tedaviler</span>
+                </h1>
+
+                <p>
+                    Kliniğimizde verilmekte olan tedavi hizmetleri
+                </p>
+            </div>
+        </div>
+        
+        
+       
+      <div class="row g-4">
+        
+        <!-- Blog Yazıları -->
+        <div class="col-12">
+          <div class="row g-4">
+
+            <!-- Blog Kartı -->
+            <div class="col-md-4">
+              <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                <img src="../img/dis-poliklinigi.png" class="card-img-top rounded-top-4" alt="Diş Polikliniği">
+                <div class="card-body">
+                  <h5 class="card-title fw-semibold">Diş Polikliniği</h5>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <a href="dis-poliklinigi.html" class="btn btn-outline-success btn-sm">Detaylar</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Blog Kartı -->
+            <div class="col-md-4">
+              <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                <img src="../img/implant-tedavisi.jpg" class="card-img-top rounded-top-4" alt="İmplantoloji">
+                <div class="card-body">
+                  <h5 class="card-title fw-semibold">İmplantoloji</h5>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <a href="implant-tedavisi.html" class="btn btn-outline-success btn-sm">Detaylar</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Blog Kartı -->
+            <div class="col-md-4">
+              <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                <img src="../img/ortodonti-nedir-nasil-tedavi-edilir.jpg" class="card-img-top rounded-top-4" alt="Ortodonti">
+                <div class="card-body">
+                  <h5 class="card-title fw-semibold">Ortodonti</h5>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <a href="ortodonti.html" class="btn btn-outline-success btn-sm">Detaylar</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Blog Kartı -->
+            <div class="col-md-4">
+              <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                <img src="../img/pediatri.jpg" class="card-img-top rounded-top-4" alt="Pediatri">
+                <div class="card-body">
+                  <h5 class="card-title fw-semibold">Pediatri</h5>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <a href="pediatri.html" class="btn btn-outline-success btn-sm">Detaylar</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Blog Kartı -->
+            <div class="col-md-4">
+              <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                <img src="../img/pedodonti.jpg" class="card-img-top rounded-top-4" alt="Pedodonti">
+                <div class="card-body">
+                  <h5 class="card-title fw-semibold">Pedodonti</h5>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <a href="pedodonti.html" class="btn btn-outline-success btn-sm">Detaylar</a>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Blog Kartı -->
+            <div class="col-md-4">
+              <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                <img src="../img/periodontoloji.webp" class="card-img-top rounded-top-4" alt="Periodontoloji">
+                <div class="card-body">
+                  <h5 class="card-title fw-semibold">Periodontoloji</h5>
+                </div>
+                <div class="card-footer bg-white border-0">
+                  <a href="periodontoloji.html" class="btn btn-outline-success btn-sm">Detaylar</a>
+                </div>
+              </div>
+            </div>  
+
+          </div>
+
+        </div>
+      </div>
+
+        
+
+        <!-- İletişim Bölümü -->
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <h2 class="display-3 ms-1 mt-5">Bize Ulaşın<span class="text-green">.</span></h2>
+
+                <!-- Adres -->
+                <div class="contact-item d-flex align-items-center rounded-3">
+                    <i class="bi bi-geo-alt-fill contact-icon"></i>
+                    <div>
+                        <h5>Adres</h5>
+                        <p class="mb-0">
+                            Avsallar Mahallesi Hamdi Cad. Meydan Konutları Sitesi B Blok No:2,<br> 07410 Alanya/Antalya
+                             
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Telefon -->
+                <div class="contact-item d-flex align-items-center rounded-3">
+                    <i class="bi bi-telephone-fill contact-icon"></i>
+                    <div>
+                        <h5>Telefon</h5>
+                        <p class="mb-0">
+                            <a href="tel:+905441660707" class="text-decoration-none color-inherit"> +90 544 166 07 07</a><br>
+                             
+                        </p>
+                    </div>
+                </div>
+
+                <!-- E-posta -->
+                <div class="contact-item d-flex align-items-center rounded-3">
+                    <i class="bi bi-envelope-fill contact-icon"></i>
+                    <div>
+                        <h5>E-posta</h5>
+                        <p class="mb-0">
+                            <a href="mailto:info@drteeth.com.tr" class="text-decoration-none color-inherit">info@drteeth.com.tr</a><br>
+                             
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 ps-md-3 mt-4 mt-md-0">
+                <div class="map-responsive rounded-3 shadow-sm overflow-hidden h-100 border">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.114797559564!2d31.773351575571784!3d36.62362327763368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dcaf9aa3a5dae7%3A0x7834d3ed68a58857!2sDr.%20Teeth%20Di%C5%9F%20Hekimi%20%2F%20Dentist%20%2FZahnarzt!5e0!3m2!1str!2str!4v1754736544904!5m2!1str!2str" width="100%" height="100%" style="border:0; min-height: 400px; display: block;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <footer class="mt-5">
+        <div class="col-12 p-4 text-center">
+            Dr Teeth Ağız ve Diş Sağlığı Polikliniği © 2025 | Tüm Hakları Saklıdır.
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+</body>
+
+</html>
