@@ -94,7 +94,7 @@
 
                 <!-- Randevu butonu (sağa yaslı) -->
                 <div class="navbar-randevu">
-                    <a href="#" class="btn btn-dark">
+                    <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#randevuModal">
                         <i class="bi bi-calendar-check"></i> Randevu Al
                     </a>
                 </div>
@@ -241,6 +241,100 @@
             Dr Teeth Ağız ve Diş Sağlığı Polikliniği © 2025 | Tüm Hakları Saklıdır.
         </div>
     </footer>
+    
+    
+    
+    <!-- Randevu Modal -->
+    <div class="modal fade" id="randevuModal" tabindex="-1" aria-labelledby="randevuLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="randevuLabel">Randevu Formu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form class="needs-validation" novalidate>
+                        <!-- Ad Soyad -->
+                        <div class="mb-3">
+                            <label for="adSoyad" class="form-label">Ad Soyad</label>
+                            <input type="text" class="form-control" id="adSoyad" required>
+                            <div class="invalid-feedback">
+                                Lütfen adınızı ve soyadınızı giriniz.
+                            </div>
+                        </div>
+
+                        <!-- Telefon -->
+                        <div class="mb-3">
+                            <label for="telefon" class="form-label">Telefon</label>
+                            <input type="tel" class="form-control" id="telefon" pattern="^0[5-9]{2}[0-9]{7}$" required>
+                            <div class="invalid-feedback">
+                                Lütfen geçerli bir telefon numarası giriniz. (Örn: 05xx xxx xx xx)
+                            </div>
+                        </div>
+
+                        <!-- E-posta -->
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-posta</label>
+                            <input type="email" class="form-control" id="email" required>
+                            <div class="invalid-feedback">
+                                Lütfen geçerli bir e-posta adresi giriniz.
+                            </div>
+                        </div>
+
+                        <!-- Tarih -->
+                        <div class="mb-3">
+                            <label for="tarih" class="form-label">Randevu Tarihi</label>
+                            <input type="date" class="form-control" id="tarih" required>
+                            <div class="invalid-feedback">
+                                Lütfen bir tarih seçiniz.
+                            </div>
+                        </div>
+
+                        <!-- Mesaj -->
+                        <div class="mb-3">
+                            <label for="mesaj" class="form-label">Not / Mesaj (Opsiyonel)</label>
+                            <textarea class="form-control" id="mesaj" rows="3"></textarea>
+                        </div>
+
+                        <!-- Gönder Butonu -->
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-success">Randevu Gönder</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap Form Validation Script -->
+    <script>
+        (() => {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+    
+    
+    
+    
+    
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/905555555555" class="btn btn-success rounded-circle shadow d-flex align-items-center justify-content-center" target="_blank" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; z-index: 9999;">
+        <i class="bi bi-whatsapp fs-2"></i>
+    </a>
+    
+    
 
     <!-- Bootstrap 5 JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
