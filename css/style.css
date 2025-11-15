@@ -141,7 +141,7 @@
      }
 
      #bg-second {
-         background-image: url('../img/dentist-clinic-bg.jpeg');
+         background-image: url('../img/dentist_clinic.jpg');
          background-size: cover;
          background-position: center;
          flex: 1;
@@ -479,3 +479,10 @@
         .back-to-blog:hover {
             color: #159b7d;
         }
+/* Mobilde container padding'ini kaldır */
+@media (max-width: 767.98px) {
+     .row-p-0 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
