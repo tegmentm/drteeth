@@ -1,0 +1,369 @@
+<?php
+// mail-gonder.php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require __DIR__ . '/vendor/autoload.php'; // Composer autoload
+$config = require __DIR__ . '/config.php';
+
+// Form verileri (basit temizleme)
+$adSoyad = trim($_POST['adSoyad'] ?? '');
+$telefon = trim($_POST['telefon'] ?? '');
+$email   = trim($_POST['email'] ?? '');
+$tarih   = trim($_POST['tarih'] ?? '');
+$mesaj   = trim($_POST['mesaj'] ?? '');
+
+// Basit validation
+$errors = [];
+if ($adSoyad === '') $errors[] = 'Ad Soyad boş olamaz.';
+if ($telefon === '') $errors[] = 'Telefon boş olamaz.';
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = 'Geçerli e-posta giriniz.';
+if ($tarih === '') $errors[] = 'Tarih seçiniz.';
+
+if (!empty($errors)) {
+    foreach ($errors as $e) echo "<p style='color:red;'>$e</p>";
+    echo "<p><a href='index.html'>Geri dön</a></p>";
+    exit;
+}
+
+// HTML template yükle ve değişkenleri yerleştir
+$template = file_get_contents(__DIR__ . '/mail-template.html');
+$replace = [
+    '{{adSoyad}}' => htmlspecialchars($adSoyad, ENT_QUOTES),
+    '{{telefon}}' => htmlspecialchars($telefon, ENT_QUOTES),
+    '{{email}}'   => htmlspecialchars($email, ENT_QUOTES),
+    '{{tarih}}'   => htmlspecialchars($tarih, ENT_QUOTES),
+    '{{mesaj}}'   => nl2br(htmlspecialchars($mesaj, ENT_QUOTES))
+];
+$htmlBody = str_replace(array_keys($replace), array_values($replace), $template);
+
+$mail = new PHPMailer(true);
+try {
+    // SMTP ayarları
+    $mail->isSMTP();
+    $mail->Host       = $config['smtp_host'];
+    $mail->SMTPAuth   = true;
+    $mail->Username   = $config['smtp_user'];
+    $mail->Password   = $config['smtp_pass'];
+    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+    $mail->Port       = $config['smtp_port'];
+
+    // Gönderen ve alıcı
+    $mail->setFrom($config['from_email'], $config['from_name']);
+    $mail->addAddress($config['to_email'], $config['to_name']);
+    $mail->addReplyTo($email, $adSoyad);
+
+    // İçerik
+    $mail->isHTML(true);
+    $mail->Subject = "Yeni Randevu: $adSoyad";
+    $mail->Body    = $htmlBody;
+    $mail->AltBody = strip_tags($htmlBody);
+
+    $mail->send();
+    echo '<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teeth House | Dental Clinic</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- Font Connection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+    <!-- CSS Connection -->
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <!-- Logo (sola yaslı) -->
+            <a class="navbar-brand" href="#">
+                <img src="../img/teethouse_logo_1.png" alt="Logo">
+            </a>
+
+            <!-- Mobil menü butonu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menü öğeleri -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../hakkimizda.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..//tedaviler/tedaviler.html">Tedaviler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..//blog/blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-section">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <div class="alert alert-success d-flex flex-column align-items-center my-5 text-center" role="alert">
+                    <span class="h1">
+                        <i class="bi bi-clipboard-check"></i>
+                    </span>
+                    <p class="h3">
+                        Randevu Talebiniz Başarılı Bir Şekilde Gönderildi. Ekibimiz En Kısa Sürede Sizinle İletişime Geçecektir.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- İletişim Bölümü -->
+        <div class="row mt-5" id="contact-section">
+            <div class="col-md-6">
+                <h2 class="display-3 ms-1 mt-5">Bize Ulaşın<span class="text-green">.</span></h2>
+
+                <!-- Adres -->
+                <div class="contact-item d-flex align-items-center rounded-3">
+                    <i class="bi bi-geo-alt-fill contact-icon"></i>
+                    <div>
+                        <h5>Adres</h5>
+                        <p class="mb-0">
+                            Avsallar Mahallesi Hamdi Cad. Meydan Konutları Sitesi B Blok No:2,<br> 07410 Alanya/Antalya
+
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Telefon -->
+                <div class="contact-item d-flex align-items-center rounded-3">
+                    <i class="bi bi-telephone-fill contact-icon"></i>
+                    <div>
+                        <h5>Telefon</h5>
+                        <p class="mb-0">
+                            <a href="tel:+905441660707" class="text-decoration-none color-inherit"> +90 544 166 07 07</a><br>
+
+                        </p>
+                    </div>
+                </div>
+
+                <!-- E-posta -->
+                <div class="contact-item d-flex align-items-center rounded-3">
+                    <i class="bi bi-envelope-fill contact-icon"></i>
+                    <div>
+                        <h5>E-posta</h5>
+                        <p class="mb-0">
+                            <a href="mailto:iletisim@teethouse.com" class="text-decoration-none color-inherit">iletisim@teethouse.com</a><br>
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 ps-md-3 mt-4 mt-md-0">
+                <div class="map-responsive rounded-3 shadow-sm overflow-hidden h-100 border">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.114797559564!2d31.773351575571784!3d36.62362327763368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dcaf9aa3a5dae7%3A0x7834d3ed68a58857!2sDr.%20Teeth%20Di%C5%9F%20Hekimi%20%2F%20Dentist%20%2FZahnarzt!5e0!3m2!1str!2str!4v1754736544904!5m2!1str!2str" width="100%" height="100%" style="border:0; min-height: 400px; display: block;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+        <footer class="mt-5">
+        <div class="col-12 p-4 text-center">
+            Teeth House Ağız ve Diş Sağlığı Polikliniği © 2025 | Tüm Hakları Saklıdır.
+        </div>
+    </footer>
+    
+        
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/905441660707" class="btn btn-success rounded-circle shadow d-flex align-items-center justify-content-center" target="_blank" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; z-index: 9999;">
+        <i class="bi bi-whatsapp fs-2"></i>
+    </a>
+    </a>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    
+
+</body>
+
+</html>';
+} catch (Exception $e) {
+    echo '<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teeth House | Dental Clinic</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- Font Connection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+    <!-- CSS Connection -->
+    <link rel="stylesheet" href="../css/style.css">
+
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <!-- Logo (sola yaslı) -->
+            <a class="navbar-brand" href="#">
+                <img src="../img/teethouse_logo_1.png" alt="Logo">
+            </a>
+
+            <!-- Mobil menü butonu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menü öğeleri -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../hakkimizda.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..//tedaviler/tedaviler.html">Tedaviler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="..//blog/blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-section">İletişim</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <div class="alert alert-danger d-flex flex-column align-items-center my-5 text-center" role="alert">
+                    <span class="h1">
+                        <i class="bi bi-exclamation-diamond"></i>
+                    </span>
+                    <p class="h3">
+                        Randevu Talebiniz Oluşturulurken Bir Hata Oluştu. Lütfen Ekimizle İletişime Geçiniz
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- İletişim Bölümü -->
+        <div class="row mt-5" id="contact-section">
+            <div class="col-md-6">
+                <h2 class="display-3 ms-1 mt-5">Bize Ulaşın<span class="text-green">.</span></h2>
+
+                <!-- Adres -->
+                <div class="contact-item d-flex align-items-center rounded-3">
+                    <i class="bi bi-geo-alt-fill contact-icon"></i>
+                    <div>
+                        <h5>Adres</h5>
+                        <p class="mb-0">
+                            Avsallar Mahallesi Hamdi Cad. Meydan Konutları Sitesi B Blok No:2,<br> 07410 Alanya/Antalya
+
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Telefon -->
+                <div class="contact-item d-flex align-items-center rounded-3">
+                    <i class="bi bi-telephone-fill contact-icon"></i>
+                    <div>
+                        <h5>Telefon</h5>
+                        <p class="mb-0">
+                            <a href="tel:+905441660707" class="text-decoration-none color-inherit"> +90 544 166 07 07</a><br>
+
+                        </p>
+                    </div>
+                </div>
+
+                <!-- E-posta -->
+                <div class="contact-item d-flex align-items-center rounded-3">
+                    <i class="bi bi-envelope-fill contact-icon"></i>
+                    <div>
+                        <h5>E-posta</h5>
+                        <p class="mb-0">
+                            <a href="mailto:iletisim@teethouse.com" class="text-decoration-none color-inherit">iletisim@teethouse.com</a><br>
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 ps-md-3 mt-4 mt-md-0">
+                <div class="map-responsive rounded-3 shadow-sm overflow-hidden h-100 border">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.114797559564!2d31.773351575571784!3d36.62362327763368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dcaf9aa3a5dae7%3A0x7834d3ed68a58857!2sDr.%20Teeth%20Di%C5%9F%20Hekimi%20%2F%20Dentist%20%2FZahnarzt!5e0!3m2!1str!2str!4v1754736544904!5m2!1str!2str" width="100%" height="100%" style="border:0; min-height: 400px; display: block;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+        <footer class="mt-5">
+        <div class="col-12 p-4 text-center">
+            Teeth House Ağız ve Diş Sağlığı Polikliniği © 2025 | Tüm Hakları Saklıdır.
+        </div>
+    </footer>
+    
+        
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/905441660707" class="btn btn-success rounded-circle shadow d-flex align-items-center justify-content-center" target="_blank" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; z-index: 9999;">
+        <i class="bi bi-whatsapp fs-2"></i>
+    </a>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+   
+
+</body>
+
+</html>';
+}
