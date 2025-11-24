@@ -1,4 +1,23 @@
 <?php
+
+
+$secret = "6LdTKBYsAAAAANpF0nh5smftFgyD232ekHUY2nVf";
+$token  = $_POST['g-recaptcha-response'];
+$ip     = $_SERVER['REMOTE_ADDR'];
+
+$verifyURL = "https://www.google.com/recaptcha/api/siteverify?secret=$secret&response=$token&remoteip=$ip";
+
+$response = file_get_contents($verifyURL);
+$responseKeys = json_decode($response, true);
+
+// reCAPTCHA puanı 0.5 üstü ise iyi sayıyoruz
+if(!$responseKeys["success"] || $responseKeys["score"] < 0.5) {
+    die("BOT tespit edildi! Kanka sen de çok zeki birisin ama ben daha zekiyim 😎");
+}
+
+
+
+
 // mail-gonder.php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
