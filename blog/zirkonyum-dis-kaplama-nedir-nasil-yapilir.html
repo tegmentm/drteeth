@@ -44,7 +44,6 @@
             },
             "datePublished": "2025-09-04"
         }
-
     </script>
 
     <!-- Bootstrap 5 CSS -->
@@ -244,7 +243,7 @@
                     <p>
                         Zirkonyum kaplamanın birçok avantajı olduğu gibi bazı dezavantajları da vardır. Öncelikle pahalı bir işlemdir. Zirkonyum kaplamalar diğer kaplamalardan daha pahalıdır. Zirkonyum kaplamalar doğru kullanıldığı takdirde uzun yıllar kullanılabilir ve dezavantajı bir avantaj haline gelir. Diğer bir durum ise zirkonyum dişlerin zamanla yıpranabilmesidir. Zirkonyum kaplamalar çok sert bir malzeme olduğu için doğal dişlere zarar verme ihtimali vardır. Diğer bir dezavantaj, ikincil bir çürük olasılığıdır. Sert malzemeden yapılan zirkonyum, doğal dişleri aşındırarak çürümeye neden olabilir.
                     </p>
-                    
+
                     <h2>
                         Zirkonyum Diş Kaplama Operasyonu Sonrası Beslenme
                     </h2>
@@ -374,7 +373,7 @@
                         <h5>Adres</h5>
                         <p class="mb-0">
                             Avsallar Mahallesi Hamdi Cad. Meydan Konutları Sitesi B Blok No:2,<br> 07410 Alanya/Antalya
-                             
+
                         </p>
                     </div>
                 </div>
@@ -386,7 +385,7 @@
                         <h5>Telefon</h5>
                         <p class="mb-0">
                             <a href="tel:+905441660707" class="text-decoration-none color-inherit"> +90 544 166 07 07</a><br>
-                             
+
                         </p>
                     </div>
                 </div>
@@ -398,7 +397,7 @@
                         <h5>E-posta</h5>
                         <p class="mb-0">
                             <a href="mailto:iletisim@teethouse.com" class="text-decoration-none color-inherit">iletisim@teethouse.com</a><br>
-                             
+
                         </p>
                     </div>
                 </div>
@@ -422,9 +421,9 @@
             Teeth House Ağız ve Diş Sağlığı Polikliniği © 2025 | Tüm Hakları Saklıdır.
         </div>
     </footer>
-    
-    
-    
+
+
+
     <!-- Randevu Modal -->
     <div class="modal fade" id="randevuModal" tabindex="-1" aria-labelledby="randevuLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -435,59 +434,47 @@
                 </div>
                 <div class="modal-body">
 
-                    <form class="needs-validation" novalidate>
-                        <!-- Ad Soyad -->
-                        <div class="mb-3">
-                            <label for="adSoyad" class="form-label">Ad Soyad</label>
-                            <input type="text" class="form-control" id="adSoyad" required>
-                            <div class="invalid-feedback">
-                                Lütfen adınızı ve soyadınızı giriniz.
-                            </div>
-                        </div>
+                    <form id="randevu-formu" class="needs-validation" method="POST" action="../randevu/mail-gonder.php" novalidate>
 
-                        <!-- Telefon -->
-                        <div class="mb-3">
-                            <label for="telefon" class="form-label">Telefon</label>
-                            <input type="tel" class="form-control" id="telefon" pattern="^0[5-9]{2}[0-9]{7}$" required>
-                            <div class="invalid-feedback">
-                                Lütfen geçerli bir telefon numarası giriniz. (Örn: 05xx xxx xx xx)
-                            </div>
-                        </div>
+            <div class="mb-3">
+                <label for="adSoyad" class="form-label">Ad Soyad</label>
+                <input type="text" class="form-control" id="adSoyad" name="adSoyad" required>
+            </div>
 
-                        <!-- E-posta -->
-                        <div class="mb-3">
-                            <label for="email" class="form-label">E-posta</label>
-                            <input type="email" class="form-control" id="email" required>
-                            <div class="invalid-feedback">
-                                Lütfen geçerli bir e-posta adresi giriniz.
-                            </div>
-                        </div>
+            <div class="mb-3">
+                <label for="telefon" class="form-label">Telefon</label>
+                <input type="tel" class="form-control" id="telefon" name="telefon" required>
+            </div>
 
-                        <!-- Tarih -->
-                        <div class="mb-3">
-                            <label for="tarih" class="form-label">Randevu Tarihi</label>
-                            <input type="date" class="form-control" id="tarih" required>
-                            <div class="invalid-feedback">
-                                Lütfen bir tarih seçiniz.
-                            </div>
-                        </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">E-posta</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
 
-                        <!-- Mesaj -->
-                        <div class="mb-3">
-                            <label for="mesaj" class="form-label">Not / Mesaj (Opsiyonel)</label>
-                            <textarea class="form-control" id="mesaj" rows="3"></textarea>
-                        </div>
+            <div class="mb-3">
+                <label for="tarih" class="form-label">Randevu Tarihi</label>
+                <input type="date" class="form-control" id="tarih" name="tarih" required>
+            </div>
 
-                        <!-- Gönder Butonu -->
-                        <div class="d-grid">
-                            <button type="submit" class="btn btn-success">Randevu Gönder</button>
-                        </div>
-                    </form>
+            <div class="mb-3">
+                <label for="mesaj" class="form-label">Not / Mesaj (Opsiyonel)</label>
+                <textarea class="form-control" id="mesaj" name="mesaj"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-success g-recaptcha" data-sitekey="6LdTKBYsAAAAAGGYqF8m-wpi_bp1AFPzrt8I-LcA" data-callback='onSubmit' data-action='submit'>
+                Randevu Gönder
+            </button>
+
+        </form>
+
 
                 </div>
             </div>
         </div>
     </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Bootstrap Form Validation Script -->
     <script>
@@ -505,21 +492,24 @@
             })
         })()
     </script>
-    
-    
-    
-    
-    
+
+    <!-- Recaptcha Scriptleri Start -->
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script>
+        function onSubmit(token) {
+            document.getElementById("randevu-formu").submit();
+        }
+    </script>
+    <!-- Recaptcha Scriptleri End -->
+
+
+
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/905441660707" class="btn btn-success rounded-circle shadow d-flex align-items-center justify-content-center" target="_blank" style="position: fixed; bottom: 20px; right: 20px; width: 60px; height: 60px; z-index: 9999;">
         <i class="bi bi-whatsapp fs-2"></i>
     </a>
-    
-    
-    
 
-    <!-- Bootstrap 5 JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
 </body>
 
