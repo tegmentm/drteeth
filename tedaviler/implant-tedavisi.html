@@ -24,22 +24,146 @@
 
     <!-- CSS Connection -->
     <link rel="stylesheet" href="../css/style.css">
-    
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [{
+                    "@type": "Dentist",
+                    "@id": "https://teethouse.com/#clinic",
+                    "name": "Teeth House Ağız ve Diş Sağlığı Polikliniği",
+                    "image": "https://teethouse.com/img/implant-tedavisi.jpg",
+                    "url": "https://teethouse.com/tedaviler/implant-tedavisi.html",
+                    "telephone": "+905441660707",
+                    "email": "iletisim@teethouse.com",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Avsallar Mahallesi Hamdi Cad. Meydan Konutları Sitesi B Blok No:2",
+                        "addressLocality": "Alanya",
+                        "addressRegion": "Antalya",
+                        "postalCode": "07410",
+                        "addressCountry": "TR"
+                    },
+                    "geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": 36.623623,
+                        "longitude": 31.773351
+                    },
+                    "priceRange": "$$",
+                    "openingHours": "Mo-Su 09:00-22:00"
+                },
+
+                {
+                    "@type": "MedicalWebPage",
+                    "@id": "https://teethouse.com/tedaviler/implant-tedavisi.html#webpage",
+                    "url": "https://teethouse.com/tedaviler/implant-tedavisi.html",
+                    "name": "İmplant Tedavisi - Teeth House",
+                    "description": "İmplant tedavisi, avantajları ve süreçleri hakkında detaylı bilgiler.",
+                    "publisher": {
+                        "@id": "https://teethouse.com/#clinic"
+                    },
+                    "mainEntity": {
+                        "@id": "https://teethouse.com/tedaviler/implant-tedavisi.html#implantProcedure"
+                    }
+                },
+
+                {
+                    "@type": "MedicalProcedure",
+                    "@id": "https://teethouse.com/tedaviler/implant-tedavisi.html#implantProcedure",
+                    "name": "İmplant Tedavisi",
+                    "alternateName": "Dental Implant",
+                    "url": "https://teethouse.com/tedaviler/implant-tedavisi.html",
+                    "image": "https://teethouse.com/img/implant-tedavisi.jpg",
+                    "bodyLocation": "Çene kemiği",
+                    "procedureType": "Cerrahi",
+                    "medicalSpecialty": "Implantoloji",
+                    "description": "Kaybedilen dişlerin yerine çene kemiğine yerleştirilen implantların uygulanması ve avantajları."
+                },
+
+                {
+                    "@type": "BreadcrumbList",
+                    "@id": "https://teethouse.com/tedaviler/implant-tedavisi.html#breadcrumb",
+                    "itemListElement": [{
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Anasayfa",
+                            "item": "https://teethouse.com"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Tedaviler",
+                            "item": "https://teethouse.com/tedaviler.html"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "İmplantoloji",
+                            "item": "https://teethouse.com/tedaviler/implant-tedavisi.html"
+                        }
+                    ]
+                },
+
+                {
+                    "@type": "FAQPage",
+                    "@id": "https://teethouse.com/tedaviler/implant-tedavisi.html#faq",
+                    "mainEntity": [{
+                            "@type": "Question",
+                            "name": "İmplant kimlere uygulanır?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Tek diş eksikliği, çoklu diş kaybı, tam diş eksikliği ve çene kemik yapısı uygun olan kişilere uygulanabilir."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "İmplantın avantajları nelerdir?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Daha iyi çiğneme fonksiyonu, estetik uyum, dayanıklılık ve protez kullanımını azaltması önemli avantajlardır."
+                            }
+                        },
+                        {
+                            "@type": "Question",
+                            "name": "İmplant sonrası iyileşme süresi ne kadardır?",
+                            "acceptedAnswer": {
+                                "@type": "Answer",
+                                "text": "Alt çene için 2-3 ay, üst çene için 3-4 ay iyileşme süresi gereklidir."
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    </script>
+
+
     <!-- Recaptcha Connection -->
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdTKBYsAAAAAGGYqF8m-wpi_bp1AFPzrt8I-LcA"></script>
 
-<!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MS28HMQC');</script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MS28HMQC');
+    </script>
     <!-- End Google Tag Manager -->
 
 </head>
 
 <body>
-    
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MS28HMQC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
