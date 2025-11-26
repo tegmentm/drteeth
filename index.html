@@ -84,6 +84,66 @@
 
     <!-- CSS Connection -->
     <link rel="stylesheet" href="css/style.css">
+    
+    
+    <style>
+    /* wrapper */
+.lang-toggle-wrapper { display: inline-flex; align-items: center; }
+
+/* görünmeyen checkbox */
+.lang-switch input { display: none; }
+
+/* slider pill */
+.lang-slider {
+  width: 66px;
+  height: 32px;
+  background: #e9f1fb; /* site mavi tonuna uy */
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 12px;
+  color: #0b5fa5;
+}
+
+/* top */
+.lang-slider::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(10,10,10,0.12);
+  transition: transform .25s cubic-bezier(.2,.9,.3,1);
+}
+
+/* pozisyon: checked -> sağa kaydır */
+.lang-switch input:checked + .lang-slider::before {
+  transform: translateX(34px);
+}
+
+/* metin renkleri (aktif/pasif) */
+.lang-left { margin-left: 6px; }
+.lang-right { margin-right: 6px; }
+
+/* optional: mobilde biraz daha küçük */
+@media (max-width: 576px) {
+  .lang-slider { width: 56px; height: 28px; font-size: 11px; }
+  .lang-slider::before { width: 20px; height: 20px; left: 4px; top: 4px; }
+  .lang-switch input:checked + .lang-slider::before { transform: translateX(30px); }
+}
+        </style>
+
+    
+    
+    
 
    <!-- Recaptcha Connection -->
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdTKBYsAAAAAGGYqF8m-wpi_bp1AFPzrt8I-LcA"></script>
@@ -137,6 +197,18 @@
                         <a class="nav-link" href="#contact-section">İletişim</a>
                     </li>
                 </ul>
+                
+                <!-- Lang Switch -->
+                <div class="lang-toggle-wrapper ms-3">
+                    <label class="lang-switch">
+                        <input type="checkbox" id="langSwitch" aria-label="Dil seçici: English / Türkçe">
+                        <span class="lang-slider">
+                            <span class="lang-left">EN</span>
+                            <span class="lang-right">TR</span>
+                        </span>
+                    </label>
+                </div>
+
 
                 <!-- Randevu butonu (sağa yaslı) -->
                 <div class="navbar-randevu">
@@ -688,6 +760,63 @@
         }
     </script>
     <!-- Recaptcha Scriptleri End -->
+
+
+
+<script src="/js/lang-map.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.getElementById("langSwitch");
+  if (!toggle) return;
+
+  const getPath = () => window.location.pathname.replace(/\/+$/, "") || "/"; // son slash temiz
+  let currentPath = getPath();
+  const query = window.location.search || "";
+  const hash = window.location.hash || "";
+
+  // toggle pozisyonunu set et (EN dizini mi?)
+  if (currentPath.startsWith("/EN") || currentPath === "/EN") {
+    toggle.checked = true;
+  } else {
+    toggle.checked = false;
+  }
+
+  // click/change handler
+  toggle.addEventListener("change", function () {
+    currentPath = getPath();
+
+    let targetPath = null;
+
+    // 1) mapping içinde birebir eşleşme var mı?
+    if (langMap[currentPath]) {
+      targetPath = langMap[currentPath];
+    } else {
+      // 2) eğer EN dizinli değilse ve EN'ye basıldıysa -> /EN + currentPath
+      if (this.checked) {
+        // TR -> EN
+        // özel durum: root ("/") -> "/EN/"
+        if (currentPath === "/") targetPath = "/EN/";
+        else targetPath = "/EN" + (currentPath === "/" ? "" : currentPath);
+      } else {
+        // EN -> TR dönüş
+        if (currentPath.startsWith("/EN")) {
+          targetPath = currentPath.replace(/^\/EN/, "") || "/";
+        }
+      }
+    }
+
+    // fallback (sağlam olsun)
+    if (!targetPath) targetPath = this.checked ? "/EN/" : "/";
+
+    // query ve hash koruması (isteğe bağlı)
+    const finalUrl = targetPath + query + hash;
+    window.location.href = finalUrl;
+  });
+});
+</script>
+
+
+
 
 
 
