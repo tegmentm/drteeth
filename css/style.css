@@ -338,208 +338,241 @@
          border: 1px solid rgba(0, 0, 0, .1);
      }
 
-        .dentist-card {
-            transition: transform 0.3s, box-shadow 0.3s;
-            margin-bottom: 2rem;
-            overflow: hidden;
-            border-radius: 10px;
-            border: none;
-        }
-        .dentist-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-        }
-        .dentist-img {
-            object-fit: contain;
-            transition: transform 0.5s;
-        }
-        .dentist-card:hover .dentist-img {
-            transform: scale(1.05);
-        }
-        .card-title {
-            font-weight: 700;
-            border-bottom: 2px solid var(--color-green);
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-        }
-        .card-text {
-            color: #555;
-            line-height: 1.6;
-        }
-        .text-end .card-title {
-            border-bottom: 2px solid var(--color-green);
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-            display: inline-block;
-        }
-        .clinic-info {
-            background-color: white;
-            border-radius: 10px;
-            padding: 2rem;
-            margin-top: 2rem;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-        }
-        
-        /* Masaüstü görünüm için sabit yükseklik */
-        @media (min-width: 768px) {
-            .dentist-card {
-                height: 400px;
-            }
-            .dentist-img-container {
-                height: 100%;
-            }
-            .dentist-img {
-                height: 100%;
-            }
-        }
-        
-        /* Mobil görünüm için esnek yükseklik */
-        @media (max-width: 767.98px) {
-            .dentist-card {
-                height: auto !important;
-            }
-            .dentist-img-container {
-                height: 300px;
-            }
-            .dentist-img {
-                height: 100%;
-                width: 100%;
-            }
-            .header h1 {
-                font-size: 2rem;
-            }
-            .text-end {
-                text-align: left !important;
-            }
-        }
+     .dentist-card {
+         transition: transform 0.3s, box-shadow 0.3s;
+         margin-bottom: 2rem;
+         overflow: hidden;
+         border-radius: 10px;
+         border: none;
+     }
 
-.article-header {
-            background-color: #fff;
-            padding: 4rem 0 2rem;
-        }
+     .dentist-card:hover {
+         transform: translateY(-5px);
+         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+     }
 
-        .article-title {
-            font-weight: 700;
-            color: #1a1a1a;
-            margin-bottom: 1rem;
-        }
+     .dentist-img {
+         object-fit: contain;
+         transition: transform 0.5s;
+     }
 
-        .article-meta {
-            color: #6c757d;
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-        }
+     .dentist-card:hover .dentist-img {
+         transform: scale(1.05);
+     }
 
-        .article-content {
-            font-size: 1.1rem;
-            color: #444;
-        }
+     .card-title {
+         font-weight: 700;
+         border-bottom: 2px solid var(--color-green);
+         padding-bottom: 10px;
+         margin-bottom: 15px;
+     }
 
-        .article-content h2,
-        .article-content h3,
-        .article-content h4 {
-            margin-top: 2.5rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
+     .card-text {
+         color: #555;
+         line-height: 1.6;
+     }
 
-        .article-content p {
-            margin-bottom: 1.5rem;
-        }
+     .text-end .card-title {
+         border-bottom: 2px solid var(--color-green);
+         padding-bottom: 10px;
+         margin-bottom: 15px;
+         display: inline-block;
+     }
 
-        .article-content blockquote {
-            border-left: 4px solid #20c997;
-            padding-left: 1.5rem;
-            margin-left: 0;
-            font-style: italic;
-            color: #555;
-        }
+     .clinic-info {
+         background-color: white;
+         border-radius: 10px;
+         padding: 2rem;
+         margin-top: 2rem;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+     }
 
-        .article-img {
-            border-radius: 8px;
-            margin: 2rem 0;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
+     /* Masaüstü görünüm için sabit yükseklik */
+     @media (min-width: 768px) {
+         .dentist-card {
+             height: 400px;
+         }
 
-        .author-card {
-            background-color: #f8f9fa;
-            border-radius: 10px;
-            padding: 2rem;
-            margin: 3rem 0;
-        }
+         .dentist-img-container {
+             height: 100%;
+         }
 
-        .back-to-blog {
-            color: #20c997;
-            text-decoration: none;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-        }
+         .dentist-img {
+             height: 100%;
+         }
+     }
 
-        .back-to-blog:hover {
-            color: #159b7d;
-        }
-/* Mobilde container padding'ini kaldır */
-@media (max-width: 767.98px) {
-     .row-p-0 {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-    }
-}
+     /* Mobil görünüm için esnek yükseklik */
+     @media (max-width: 767.98px) {
+         .dentist-card {
+             height: auto !important;
+         }
+
+         .dentist-img-container {
+             height: 300px;
+         }
+
+         .dentist-img {
+             height: 100%;
+             width: 100%;
+         }
+
+         .header h1 {
+             font-size: 2rem;
+         }
+
+         .text-end {
+             text-align: left !important;
+         }
+     }
+
+     .article-header {
+         background-color: #fff;
+         padding: 4rem 0 2rem;
+     }
+
+     .article-title {
+         font-weight: 700;
+         color: #1a1a1a;
+         margin-bottom: 1rem;
+     }
+
+     .article-meta {
+         color: #6c757d;
+         font-size: 0.9rem;
+         margin-bottom: 1.5rem;
+     }
+
+     .article-content {
+         font-size: 1.1rem;
+         color: #444;
+     }
+
+     .article-content h2,
+     .article-content h3,
+     .article-content h4 {
+         margin-top: 2.5rem;
+         margin-bottom: 1rem;
+         font-weight: 600;
+     }
+
+     .article-content p {
+         margin-bottom: 1.5rem;
+     }
+
+     .article-content blockquote {
+         border-left: 4px solid #20c997;
+         padding-left: 1.5rem;
+         margin-left: 0;
+         font-style: italic;
+         color: #555;
+     }
+
+     .article-img {
+         border-radius: 8px;
+         margin: 2rem 0;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+     }
+
+     .author-card {
+         background-color: #f8f9fa;
+         border-radius: 10px;
+         padding: 2rem;
+         margin: 3rem 0;
+     }
+
+     .back-to-blog {
+         color: #20c997;
+         text-decoration: none;
+         font-weight: 500;
+         display: inline-flex;
+         align-items: center;
+     }
+
+     .back-to-blog:hover {
+         color: #159b7d;
+     }
+
+     /* Mobilde container padding'ini kaldır */
+     @media (max-width: 767.98px) {
+         .row-p-0 {
+             padding-left: 0 !important;
+             padding-right: 0 !important;
+         }
+     }
 
 
 
-/*Lang Switcher*/
-    /* wrapper */
-.lang-toggle-wrapper { display: inline-flex; align-items: center; margin-left: 1rem;}
+     /*Lang Switcher*/
+     /* wrapper */
+     .lang-toggle-wrapper {
+         display: inline-flex;
+         align-items: center;
+         margin-left: 1rem;
+     }
 
-/* görünmeyen checkbox */
-.lang-switch input { display: none; }
+     /* görünmeyen checkbox */
+     .lang-switch input {
+         display: none;
+     }
 
-/* slider pill */
-.lang-slider {
-  width: 66px;
-  height: 32px;
-  background: #e9f1fb; /* site mavi tonuna uy */
-  border-radius: 20px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 0 6px;
-  box-sizing: border-box;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 12px;
-  color: #0b5fa5;
-}
+     /* slider pill */
+     .lang-slider {
+         width: 66px;
+         height: 32px;
+         background: #e9f1fb;
+         /* site mavi tonuna uy */
+         border-radius: 20px;
+         position: relative;
+         display: flex;
+         align-items: center;
+         padding: 0 6px;
+         box-sizing: border-box;
+         cursor: pointer;
+         font-weight: 700;
+         font-size: 12px;
+         color: #0b5fa5;
+     }
 
-/* top */
-.lang-slider::before {
-  content: "";
-  position: absolute;
-  left: 4px;
-  top: 4px;
-  width: 24px;
-  height: 24px;
-  background: #fff;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(10,10,10,0.12);
-  transition: transform .25s cubic-bezier(.2,.9,.3,1);
-}
+     /* top */
+     .lang-slider::before {
+         content: "";
+         position: absolute;
+         left: 4px;
+         top: 4px;
+         width: 24px;
+         height: 24px;
+         background: #fff;
+         border-radius: 50%;
+         box-shadow: 0 2px 6px rgba(10, 10, 10, 0.12);
+         transition: transform .25s cubic-bezier(.2, .9, .3, 1);
+     }
 
-/* pozisyon: checked -> sağa kaydır */
-.lang-switch input:checked + .lang-slider::before {
-  transform: translateX(34px);
-}
+     /* pozisyon: checked -> sağa kaydır */
+     .lang-switch input:checked + .lang-slider::before {
+         transform: translateX(34px);
+     }
 
-/* metin renkleri (aktif/pasif) */
-.lang-left { margin-right: 5px; margin-left: 4px; }
-.lang-right { margin-left: 9px; }
+     /* metin renkleri (aktif/pasif) */
+     .lang-left {
+         margin-right: 5px;
+         margin-left: 4px;
+     }
 
-/* optional: mobilde biraz daha küçük */
-@media (max-width: 576px) {
-/*  .lang-slider { width: 56px; height: 28px; font-size: 11px; }
+     .lang-right {
+         margin-left: 9px;
+     }
+
+     /* optional: mobilde biraz daha küçük */
+     @media (max-width: 576px) {
+
+         /*  .lang-slider { width: 56px; height: 28px; font-size: 11px; }
   .lang-slider::before { width: 20px; height: 20px; left: 4px; top: 4px; }
   .lang-switch input:checked + .lang-slider::before { transform: translateX(30px); }*/
-    .lang-toggle-wrapper {display: flex; justify-content: center; margin-left: 0; margin-top: 10px;}
-}
+         .lang-toggle-wrapper {
+             display: flex;
+             justify-content: center;
+             margin-left: 0;
+             margin-top: 10px;
+         }
+     }
