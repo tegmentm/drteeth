@@ -86,60 +86,6 @@
     <link rel="stylesheet" href="css/style.css">
     
     
-    <style>
-    /* wrapper */
-.lang-toggle-wrapper { display: inline-flex; align-items: center; }
-
-/* görünmeyen checkbox */
-.lang-switch input { display: none; }
-
-/* slider pill */
-.lang-slider {
-  width: 66px;
-  height: 32px;
-  background: #e9f1fb; /* site mavi tonuna uy */
-  border-radius: 20px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 0 6px;
-  box-sizing: border-box;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 12px;
-  color: #0b5fa5;
-}
-
-/* top */
-.lang-slider::before {
-  content: "";
-  position: absolute;
-  left: 4px;
-  top: 4px;
-  width: 24px;
-  height: 24px;
-  background: #fff;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(10,10,10,0.12);
-  transition: transform .25s cubic-bezier(.2,.9,.3,1);
-}
-
-/* pozisyon: checked -> sağa kaydır */
-.lang-switch input:checked + .lang-slider::before {
-  transform: translateX(34px);
-}
-
-/* metin renkleri (aktif/pasif) */
-.lang-left { margin-left: 6px; }
-.lang-right { margin-right: 6px; }
-
-/* optional: mobilde biraz daha küçük */
-@media (max-width: 576px) {
-  .lang-slider { width: 56px; height: 28px; font-size: 11px; }
-  .lang-slider::before { width: 20px; height: 20px; left: 4px; top: 4px; }
-  .lang-switch input:checked + .lang-slider::before { transform: translateX(30px); }
-}
-        </style>
 
     
     
@@ -198,16 +144,7 @@
                     </li>
                 </ul>
                 
-                <!-- Lang Switch -->
-                <div class="lang-toggle-wrapper ms-3">
-                    <label class="lang-switch">
-                        <input type="checkbox" id="langSwitch" aria-label="Dil seçici: English / Türkçe">
-                        <span class="lang-slider">
-                            <span class="lang-left">EN</span>
-                            <span class="lang-right">TR</span>
-                        </span>
-                    </label>
-                </div>
+                
 
 
                 <!-- Randevu butonu (sağa yaslı) -->
@@ -216,6 +153,19 @@
                         <i class="bi bi-calendar-check"></i> Randevu Al
                     </a>
                 </div>
+                
+                
+                <!-- Lang Switch -->
+                <div class="lang-toggle-wrapper">
+                    <label class="lang-switch">
+                        <input type="checkbox" id="langSwitch" aria-label="Dil seçici: English / Türkçe">
+                        <span class="lang-slider">
+                            <span class="lang-left">EN</span>
+                            <span class="lang-right">TR</span>
+                        </span>
+                    </label>
+                </div>
+                
             </div>
         </div>
     </nav>

@@ -80,12 +80,23 @@
     <link rel="stylesheet" href="../css/style.css">
 
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdTKBYsAAAAAGGYqF8m-wpi_bp1AFPzrt8I-LcA"></script>
-    
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MS28HMQC');</script>
+
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MS28HMQC');
+    </script>
 
 </head>
 
@@ -130,6 +141,18 @@
                         <i class="bi bi-calendar-check"></i> Make an Appointment
                     </a>
                 </div>
+
+                <!-- Navbar içinde, sağ grup -->
+                <div class="lang-toggle-wrapper">
+                    <label class="lang-switch">
+                        <input type="checkbox" id="langSwitch" aria-label="Dil seçici: English / Türkçe">
+                        <span class="lang-slider">
+                            <span class="lang-left">EN</span>
+                            <span class="lang-right">TR</span>
+                        </span>
+                    </label>
+                </div>
+
             </div>
         </div>
     </nav>
@@ -503,7 +526,7 @@
         </div>
 
     </main>
-    
+
     <footer class="mt-5">
         <div class="col-12 p-4 text-center">
             Teeth House Ağız ve Diş Sağlığı Polikliniği © 2025 | All Rights Reserved.
@@ -618,10 +641,68 @@
 
 
 
+    <script src="/js/lang-map.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggle = document.getElementById("langSwitch");
+            if (!toggle) return;
+
+            const getPath = () => window.location.pathname.replace(/\/+$/, "") || "/"; // son slash temiz
+            let currentPath = getPath();
+            const query = window.location.search || "";
+            const hash = window.location.hash || "";
+
+            // toggle pozisyonunu set et (EN dizini mi?)
+            if (currentPath.startsWith("/EN") || currentPath === "/EN") {
+                toggle.checked = true;
+            } else {
+                toggle.checked = false;
+            }
+
+            // click/change handler
+            toggle.addEventListener("change", function() {
+                currentPath = getPath();
+
+                let targetPath = null;
+
+                // 1) mapping içinde birebir eşleşme var mı?
+                if (langMap[currentPath]) {
+                    targetPath = langMap[currentPath];
+                } else {
+                    // 2) eğer EN dizinli değilse ve EN'ye basıldıysa -> /EN + currentPath
+                    if (this.checked) {
+                        // TR -> EN
+                        // özel durum: root ("/") -> "/EN/"
+                        if (currentPath === "/") targetPath = "/EN/";
+                        else targetPath = "/EN" + (currentPath === "/" ? "" : currentPath);
+                    } else {
+                        // EN -> TR dönüş
+                        if (currentPath.startsWith("/EN")) {
+                            targetPath = currentPath.replace(/^\/EN/, "") || "/";
+                        }
+                    }
+                }
+
+                // fallback (sağlam olsun)
+                if (!targetPath) targetPath = this.checked ? "/EN/" : "/";
+
+                // query ve hash koruması (isteğe bağlı)
+                const finalUrl = targetPath + query + hash;
+                window.location.href = finalUrl;
+            });
+        });
+    </script>
+
+
+
+
+
+
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/905441660707" class="btn btn-success rounded-circle shadow d-flex align-items-center justify-content-center" target="_blank" style="position: fixed; bottom: 80px; right: 20px; width: 60px; height: 60px; z-index: 9999;">
         <i class="bi bi-whatsapp fs-2"></i>
     </a>
 
 </body>
+
 </html>
