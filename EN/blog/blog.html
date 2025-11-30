@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teeth House | Dental Clinic</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdTKBYsAAAAAGGYqF8m-wpi_bp1AFPzrt8I-LcA"></script>
+
+    <style>
+        .blog-header { background-color: #01CD8C; color: white; padding: 3rem 1rem; text-align: center; }
+        .blog-card { transition: transform .2s ease, box-shadow .2s ease; }
+        .blog-card:hover { transform: translateY(-5px); box-shadow: 0 6px 20px rgba(0,0,0,.1); }
+        .blog-meta { font-size: .9rem; color: #6c757d; }
+        .sidebar .card { border: none; box-shadow: 0 2px 6px rgba(0,0,0,.05); }
+        .sidebar .card-title { font-size: 1.1rem; border-bottom: 2px solid #01CD8C; padding-bottom: .5rem; }
+    </style>
+
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MS28HMQC');</script>
+</head>
+
+<body class="bg-custom-light">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MS28HMQC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="/img/teethouse_logo_1.png" alt="Logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/EN/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/EN/about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/EN/treatments/treatments.html">Treatments</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/EN/blog/blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
+                </ul>
+
+                <div class="navbar-randevu">
+                    <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#randevuModal">
+                        <i class="bi bi-calendar-check"></i> Make an Appointment
+                    </a>
+                </div>
+
+                <div class="lang-toggle-wrapper">
+                    <label class="lang-switch">
+                        <input type="checkbox" id="langSwitch" aria-label="Language Switch: English / Turkish">
+                        <span class="lang-slider">
+                            <span class="lang-left">EN</span>
+                            <span class="lang-right">TR</span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container-fluid my-1">
+        <div class="row">
+            <div class="col-12 py-4" style="background-image: url(../img/hexagons-background-left.png); background-position: left bottom; background-repeat: no-repeat;">
+                <div class="d-flex gap-2 mb-3">
+                    <span class="badge rounded-pill text-bg-light border fw-medium">
+                        <i class="bi bi-arrow-bar-right me-1"></i> Blog
+                    </span>
+                </div>
+
+                <h1 class="h2 fw-3 display-8 m-0 text-shadpw-light"><span class="text-green">Dental Health</span> Blog</h1>
+                <p>Tips and up-to-date content for your oral and dental health</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-8">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                            <img src="/img/lamine_dis_kaplama.jpg" class="card-img-top rounded-top-4" alt="Lamina Veneers">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">What Are Lamina Veneers and How Are They Done?</h5>
+                                <p class="card-text">Details of lamina veneers, healing process, and what to expect...</p>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <p class="blog-meta mb-1">🖊️ Dt. Tahir KORKMAZ</p>
+                                <a href="lamine-dis-kaplama.html" class="btn btn-outline-success btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                            <img src="/img/protez_dis_tedavisi.jpg" class="card-img-top rounded-top-4" alt="Dental Prosthesis">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">What Is a Dental Prosthesis and How Is It Made?</h5>
+                                <p class="card-text">Prosthesis treatment, fabrication stages, care and healing...</p>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <p class="blog-meta mb-1">🖊️ Dt. Tahir KORKMAZ</p>
+                                <a href="protez-dis-nedir-nasil-yapilir.html" class="btn btn-outline-success btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                            <img src="/img/dis_implati_tedavisi.jpg" class="card-img-top rounded-top-4" alt="Dental Implant Treatment">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">How Long Does a Dental Implant Take?</h5>
+                                <p class="card-text">Step-by-step treatment duration, pain level, and care...</p>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <p class="blog-meta mb-1">🖊️ Dt. Tahir KORKMAZ</p>
+                                <a href="dis-implanti-tedavisi-ne-kadar-surer.html" class="btn btn-outline-success btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                            <img src="/img/zirkonyum_dis_kaplama.jpg" class="card-img-top rounded-top-4" alt="Zirconium Crowns">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">What Are Zirconium Crowns and How Are They Done?</h5>
+                                <p class="card-text">What zirconium crowns are, how they are applied, their durability, and advantages...</p>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <p class="blog-meta mb-1">🖊️ Dt. Tahir KORKMAZ</p>
+                                <a href="zirkonyum-dis-kaplama-nedir-nasil-yapilir.html" class="btn btn-outline-success btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                            <img src="/img/zirkonyum_dis_sureci.jpg" class="card-img-top rounded-top-4" alt="Zirconium Treatment Duration">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">How Long Does Zirconium Treatment Take?</h5>
+                                <p class="card-text">Learn every step of the zirconium crown procedure...</p>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <p class="blog-meta mb-1">🖊️ Dt. Tahir KORKMAZ</p>
+                                <a href="zirkonyum-dis-ne-kadar-surede-yapilir.html" class="btn btn-outline-success btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                            <img src="/img/porselen_dis_bakimi.jpg" class="card-img-top rounded-top-4" alt="Porcelain Care">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">How to Care for Porcelain Teeth?</h5>
+                                <p class="card-text">Best care tips: proper brush, ideal toothpaste, and hygiene habits...</p>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <p class="blog-meta mb-1">🖊️ Dt. Tahir KORKMAZ</p>
+                                <a href="porselen-dis-bakimi-nasil-yapilir.html" class="btn btn-outline-success btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                            <img src="/img/dis_beyazlatma_suresi.jpg" class="card-img-top rounded-top-4" alt="Whitening Duration">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">How Long Do Teeth Whitening Results Last?</h5>
+                                <p class="card-text">Extend whiteness with proper brushing, flossing, and food choices...</p>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <p class="blog-meta mb-1">🖊️ Dt. Tahir KORKMAZ</p>
+                                <a href="/EN/blog/how-Long-does-teeth-whitening-last.html" class="btn btn-outline-success btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                            <img src="/img/dis_koprusu.jpg" class="card-img-top rounded-top-4" alt="Dental Bridge">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">What Is a Dental Bridge? How Is It Applied?</h5>
+                                <p class="card-text">Bridge details, types, and functional advantages...</p>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <p class="blog-meta mb-1">🖊️ Dt. Tahir KORKMAZ</p>
+                                <a href="dis-koprusu-nedir-nasil-yapilir.html" class="btn btn-outline-success btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                            <img src="/img/dis_tasi_temizligi.jpg" class="card-img-top rounded-top-4" alt="Tartar Cleaning">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">What Is Tartar? How Is It Cleaned?</h5>
+                                <p class="card-text">How to prevent tartar buildup, professional cleaning, and oral hygiene details...</p>
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <p class="blog-meta mb-1">🖊️ Dt. Tahir KORKMAZ</p>
+                                <a href="dis-tasi-nedir-nasil-temizlenir.html" class="btn btn-outline-success btn-sm">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 sidebar">
+                <div class="card p-3 rounded-4">
+                    <h5 class="card-title">Recent Posts</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="dis-beyazlatma-ne-kadar-kalici.html" class="text-decoration-none">How Long Do Whitening Results Last?</a></li>
+                        <li><a href="dis-implanti-tedavisi-ne-kadar-surer.html" class="text-decoration-none">How Long Does Implant Treatment Take?</a></li>
+                        <li><a href="lamine-dis-kaplama.html" class="text-decoration-none">What Are Lamina Veneers?</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5" id="contact-section">
+            <div class="col-md-6">
+                <h2 class="display-3 ms-1 mt-5">Contact Us<span class="text-green">.</span></h2>
+
+                <div class="contact-item d-flex align-items-center rounded-3">
+                    <i class="bi bi-geo-alt-fill contact-icon"></i>
+                    <div>
+                        <h5>Address</h5>
+                        <p class="mb-0">Avsallar Mahallesi Hamdi Cad. Meydan Konutları Sitesi B Blok No:2,<br>07410 Alanya/Antalya</p>
+                    </div>
+                </div>
+
+                <div class="contact-item d-flex align-items-center rounded-3">
+                    <i class="bi bi-telephone-fill contact-icon"></i>
+                    <div>
+                        <h5>Phone</h5>
+                        <p class="mb-0"><a href="tel:+905441660707" class="text-decoration-none color-inherit">+90 544 166 07 07</a></p>
+                    </div>
+                </div>
+
+                <div class="contact-item d-flex align-items-center rounded-3">
+                    <i class="bi bi-envelope-fill contact-icon"></i>
+                    <div>
+                        <h5>Email</h5>
+                        <p class="mb-0"><a href="mailto:iletisim@teethouse.com" class="text-decoration-none color-inherit">iletisim@teethouse.com</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 ps-md-3 mt-4 mt-md-0">
+                <div class="map-responsive rounded-3 shadow-sm overflow-hidden h-100 border">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.114797559564!2d31.773351575571784!3d36.62362327763368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dcaf9aa3a5dae7%3A0x7834d3ed68a58857!2sDr.%20Teeth%20Dentist!5e0!3m2!1sen!2str!4v1754736544904!5m2!1sen!2str" width="100%" height="100%" style="border:0; min-height:400px; display:block;" allowfullscreen loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-5">
+        <div class="col-12 p-4 text-center">Teeth House Dental Clinic © 2025 | All Rights Reserved.</div>
+    </footer>
+
+    <div class="modal fade" id="randevuModal" tabindex="-1" aria-labelledby="randevuLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="randevuLabel">Appointment Form</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="randevu-formu" class="needs-validation" method="POST" action="/randevu/mail-gonder.php" novalidate>
+                        <div class="mb-3">
+                            <label for="adSoyad" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="adSoyad" name="adSoyad" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefon" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="telefon" name="telefon" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tarih" class="form-label">Appointment Date</label>
+                            <input type="date" class="form-control" id="tarih" name="tarih" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mesaj" class="form-label">Note / Message (Optional)</label>
+                            <textarea class="form-control" id="mesaj" name="mesaj"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success g-recaptcha" data-sitekey="6LdTKBYsAAAAAGGYqF8m-wpi_bp1AFPzrt8I-LcA" data-callback='onSubmit' data-action='submit'>Submit Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        (() => {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+
+    <script>
+        function onSubmit(token) {
+            document.getElementById("randevu-formu").submit();
+        }
+    </script>
+
+    <script src="/js/lang-map.js"></script>
+    <script src="/js/main.js"></script>
+
+    <a href="https://wa.me/905441660707" class="btn btn-success rounded-circle shadow d-flex align-items-center justify-content-center" target="_blank" style="position:fixed;bottom:80px;right:20px;width:60px;height:60px;z-index:999;"><i class="bi bi-whatsapp fs-4"></i></a>
+</body>
+</html>
