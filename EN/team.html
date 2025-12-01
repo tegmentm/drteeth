@@ -54,32 +54,32 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Menu items -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about-us.html">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="treatments/treatments.html">Treatments</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog/blog.html">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact-section">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/EN/index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/EN/about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/EN/treatments/treatments.html">Treatments</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/EN/blog/blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
                 </ul>
 
-                <!-- Appointment button (right aligned) -->
                 <div class="navbar-randevu">
                     <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#randevuModal">
-                        <i class="bi bi-calendar-check"></i> Make Appointment
+                        <i class="bi bi-calendar-check"></i> Make an Appointment
                     </a>
                 </div>
+                
+                <!-- Language Switcher Start -->
+                <div class="lang-toggle-wrapper">
+                    <label class="lang-switch">
+                        <input type="checkbox" id="langSwitch" aria-label="Language selector: English / Turkish">
+                        <span class="lang-slider">
+                            <span class="lang-left">EN</span>
+                            <span class="lang-right">TR</span>
+                        </span>
+                    </label>
+                </div><!-- Language Switcher End -->
+                
             </div>
         </div>
     </nav>
@@ -288,6 +288,9 @@
         }
     </script>
     <!-- Recaptcha Scripts End -->
+    
+    <script src="/js/lang-map.js"></script>
+    <script src="/js/main.js"></script>
 
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/905441660707" class="btn btn-success rounded-circle shadow d-flex align-items-center justify-content-center" target="_blank" style="position: fixed; bottom: 80px; right: 20px; width: 60px; height: 60px; z-index: 9999;">
