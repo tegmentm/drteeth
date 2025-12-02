@@ -100,19 +100,33 @@ try {
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 
     <!-- CSS Connection -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
+<!-- Recaptcha Connection -->
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdTKBYsAAAAAGGYqF8m-wpi_bp1AFPzrt8I-LcA"></script>
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+    new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+    "https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,"script","dataLayer","GTM-MS28HMQC");</script>
+    <!-- End Google Tag Manager -->
 
 </head>
 
 <body>
+
+<!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MS28HMQC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <!-- Logo (sola yaslı) -->
             <a class="navbar-brand" href="#">
-                <img src="../img/teethouse_logo_1.png" alt="Logo">
+                <img src="/img/teethouse_logo_1.png" alt="Logo">
             </a>
 
             <!-- Mobil menü butonu -->
@@ -124,16 +138,16 @@ try {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Anasayfa</a>
+                        <a class="nav-link" href="/index.html">Anasayfa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../hakkimizda.html">Hakkımızda</a>
+                        <a class="nav-link" href="/hakkimizda.html">Hakkımızda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="..//tedaviler/tedaviler.html">Tedaviler</a>
+                        <a class="nav-link" href="/tedaviler/tedaviler.html">Tedaviler</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="..//blog/blog.html">Blog</a>
+                        <a class="nav-link" href="/blog/blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact-section">İletişim</a>
@@ -227,7 +241,18 @@ try {
     <!-- Bootstrap 5 JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    
+    <!-- Recaptcha Scriptleri Start -->
+    <script>
+        function onSubmit(token) {
+            document.getElementById("randevu-formu").submit();
+        }
+    </script>
+    <!-- Recaptcha Scriptleri End -->
+
+
+
+<script src="/js/lang-map.js"></script>
+<script src="js/main.js"></script>
 
 </body>
 
