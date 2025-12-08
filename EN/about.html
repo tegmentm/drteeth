@@ -19,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 
     <!-- CSS Connection -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     
     <!-- Recaptcha Connection -->
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdTKBYsAAAAAGGYqF8m-wpi_bp1AFPzrt8I-LcA"></script>
@@ -45,7 +45,7 @@
         <div class="container">
 
             <a class="navbar-brand" href="#">
-                <img src="../img/teethouse_logo_1.png" alt="Logo">
+                <img src="/img/teethouse_logo_1.png" alt="Logo">
             </a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -68,15 +68,14 @@
                 </div>
                 
                 <!-- Language Switcher Start -->
-                <div class="lang-toggle-wrapper">
-                    <label class="lang-switch">
-                        <input type="checkbox" id="langSwitch" aria-label="Language selector: English / Turkish">
-                        <span class="lang-slider">
-                            <span class="lang-left">EN</span>
-                            <span class="lang-right">TR</span>
-                        </span>
-                    </label>
-                </div><!-- Language Switcher End -->
+                <div class="lang-toggle d-flex justify-content-center mt-2 mt-md-0 ms-0 ms-md-3">
+                    <select id="languageSelect">
+                        <option value="tr">TR</option>
+                        <option value="en">EN</option>
+                        <option value="de">DE</option>
+                    </select>
+                </div>
+                <!-- Language Switcher End -->
                 
             </div>
         </div>

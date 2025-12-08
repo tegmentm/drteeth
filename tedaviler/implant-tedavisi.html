@@ -23,7 +23,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 
     <!-- CSS Connection -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <script type="application/ld+json">
         {
@@ -173,7 +173,7 @@
         <div class="container">
             <!-- Logo (sola yaslı) -->
             <a class="navbar-brand" href="#">
-                <img src="../img/teethouse_logo_1.png" alt="Logo">
+                <img src="/img/teethouse_logo_1.png" alt="Logo">
             </a>
 
             <!-- Mobil menü butonu -->
@@ -185,16 +185,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Anasayfa</a>
+                        <a class="nav-link" href="/index.html">Anasayfa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../hakkimizda.html">Hakkımızda</a>
+                        <a class="nav-link" href="/hakkimizda.html">Hakkımızda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="tedaviler.html">Tedaviler</a>
+                        <a class="nav-link" href="/tedaviler/tedaviler.html">Tedaviler</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../blog/blog.html">Blog</a>
+                        <a class="nav-link" href="/blog/blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact-section">İletişim</a>
@@ -209,15 +209,14 @@
                 </div>
                 
                 <!-- Language Switcher Start -->
-                <div class="lang-toggle-wrapper">
-                    <label class="lang-switch">
-                        <input type="checkbox" id="langSwitch" aria-label="Dil seçici: English / Türkçe">
-                        <span class="lang-slider">
-                            <span class="lang-left">EN</span>
-                            <span class="lang-right">TR</span>
-                        </span>
-                    </label>
-                </div><!-- Language Switcher End -->
+                <div class="lang-toggle d-flex justify-content-center mt-2 mt-md-0 ms-0 ms-md-3">
+                    <select id="languageSelect">
+                        <option value="tr">TR</option>
+                        <option value="en">EN</option>
+                        <option value="de">DE</option>
+                    </select>
+                </div>
+                <!-- Language Switcher End -->
                 
             </div>
         </div>
@@ -257,7 +256,7 @@
                     <!-- SAĞ: Görsel -->
                     <div class="col-lg-6 hero-photo-wrap">
                         <div class="position-relative">
-                            <img src="../img/implant-tedavisi.jpg" alt="implant tedavisi" class="hero-photo w-100">
+                            <img src="/img/implant-tedavisi.jpg" alt="implant tedavisi" class="hero-photo w-100">
 
 
 
