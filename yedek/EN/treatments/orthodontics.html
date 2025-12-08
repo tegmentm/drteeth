@@ -87,7 +87,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 
     <!-- CSS Connection -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
     
     <!-- Recaptcha Connection -->
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdTKBYsAAAAAGGYqF8m-wpi_bp1AFPzrt8I-LcA"></script>
@@ -113,7 +113,7 @@
         <div class="container">
             <!-- Logo (left aligned) -->
             <a class="navbar-brand" href="#">
-                <img src="/img/teethouse_logo_1.png" alt="Logo">
+                <img src="../img/teethouse_logo_1.png" alt="Logo">
             </a>
 
             <!-- Mobile menu button -->
@@ -124,29 +124,29 @@
             <!-- Menu items -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="/EN/index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/EN/about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/EN/treatments/treatments.html">Treatments</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/EN/blog/blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="treatments.html">Treatments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../blog/blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-section">Contact</a>
+                    </li>
                 </ul>
 
+                <!-- Appointment button (right aligned) -->
                 <div class="navbar-randevu">
                     <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#randevuModal">
-                        <i class="bi bi-calendar-check"></i> Make an Appointment
+                        <i class="bi bi-calendar-check"></i> Make Appointment
                     </a>
                 </div>
-                
-                <!-- Language Switcher Start -->
-                <div class="lang-toggle d-flex justify-content-center mt-2 mt-md-0 ms-0 ms-md-3">
-                    <select id="languageSelect">
-                        <option value="tr">TR</option>
-                        <option value="en">EN</option>
-                        <option value="de">DE</option>
-                    </select>
-                </div>
-                <!-- Language Switcher End -->
-                
             </div>
         </div>
     </nav>
@@ -402,9 +402,6 @@
         }
     </script>
     <!-- Recaptcha Scripts End -->
-    
-    <script src="/js/lang-map.js"></script>
-    <script src="/js/main.js"></script>
 
 
 

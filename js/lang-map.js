@@ -140,82 +140,82 @@ const langMap = {
             },
 
             "treatments/dental-polyclinic.html": {
-                en: "/tedaviler/dis-poliklinigi.html",
+                tr: "/tedaviler/dis-poliklinigi.html",
                 de: "/DE/"
             },
 
             "treatments/implantology.html": {
-                en: "/tedaviler/implant-tedavisi.html",
+                tr: "/tedaviler/implant-tedavisi.html",
                 de: "/DE/"
             },
 
             "treatments/orthodontics.html": {
-                en: "/tedaviler/ortodonti.html",
+                tr: "/tedaviler/ortodonti.html",
                 de: "/DE/"
             },
 
             "treatments/pediatrics.html": {
-                en: "/tedaviler/pediatri.html",
+                tr: "/tedaviler/pediatri.html",
                 de: "/DE/"
             },
 
             "treatments/pedodontics.html": {
-                en: "/tedaviler/pedodonti.html",
+                tr: "/tedaviler/pedodonti.html",
                 de: "/DE/"
             },
 
             "treatments/periodontology.html": {
-                en: "/tedaviler/periodontoloji.html",
+                tr: "/tedaviler/periodontoloji.html",
                 de: "/DE/"
             },
 
             "blog/blog.html": {
-                en: "/blog/blog.html",
+                tr: "/blog/blog.html",
                 de: "/DE/"
             },
 
             "blog/how-long-does-teeth-whitening-last.html": {
-                en: "/blog/dis-beyazlatma-ne-kadar-kalici.html",
+                tr: "/blog/dis-beyazlatma-ne-kadar-kalici.html",
                 de: "/DE/"
             },
 
             "blog/how-long-does-dental-implant-treatment-take.html": {
-                en: "/blog/dis-implanti-tedavisi-ne-kadar-surer.html",
+                tr: "/blog/dis-implanti-tedavisi-ne-kadar-surer.html",
                 de: "/DE/"
             },
 
             "blog/what-is-a-dental-bridge-how-is-it-made.html": {
-                en: "/blog/dis-koprusu-nedir-nasil-yapilir.html",
+                tr: "/blog/dis-koprusu-nedir-nasil-yapilir.html",
                 de: "/DE/"
             },
 
             "blog/what-is-dental-tartar-how-is-it-cleaned.html": {
-                en: "/blog/dis-tasi-nedir-nasil-temizlenir.html",
+                tr: "/blog/dis-tasi-nedir-nasil-temizlenir.html",
                 de: "/DE/"
             },
 
             "blog/dental-laminates.html": {
-                en: "/blog/lamine-dis-kaplama.html",
+                tr: "/blog/lamine-dis-kaplama.html",
                 de: "/DE/"
             },
 
             "blog/how-to-care-fot-porcelain-teeth.html": {
-                en: "/blog/porselen-dis-bakimi-nasil-yapilir.html",
+                tr: "/blog/porselen-dis-bakimi-nasil-yapilir.html",
                 de: "/DE/"
             },
 
             "blog/what-are-dentures-how-are-they-applied.html": {
-                en: "/blog/protez-dis-nedir-nasil-yapilir.html",
+                tr: "/blog/protez-dis-nedir-nasil-yapilir.html",
                 de: "/DE/"
             },
 
             "blog/what-is-zirkonium-dental-veneer-how-is-it-applied.html": {
-                en: "/blog/zirkonyum-dis-kaplama-nedir-nasil-yapilir.html",
+                tr: "/blog/zirkonyum-dis-kaplama-nedir-nasil-yapilir.html",
                 de: "/DE/"
             },
 
             "blog/how-long-does-zirkonium-dental-application-take.html": {
-                en: "/blog/zirkonyum-dis-ne-kadar-surede-yapilir.html",
+                tr: "/blog/zirkonyum-dis-ne-kadar-surede-yapilir.html",
                 de: "/DE/"
             }
 
@@ -238,21 +238,50 @@ const langMap = {
 };
 
 // --- Dil değiştirme fonksiyonu ---
-function switchLanguage(targetLang) {
-    const currentUrl = window.location.pathname;
+// LANGUAGE DETECTOR
+function detectCurrentLang() {
+  const p = window.location.pathname.toLowerCase();
 
-    // aktif dili bul
-    let currentLang = "tr";
-    if (currentUrl.startsWith("/en/")) currentLang = "en";
-    if (currentUrl.startsWith("/de/")) currentLang = "de";
-
-    // sayfa adını ayıkla
-    const pageName = currentUrl.replace(langMap[currentLang].prefix, "");
-
-    // hedef dilde karşılığı var mı?
-    const mapped =
-        langMap[currentLang].pages[pageName]?. [targetLang] ||
-        langMap[targetLang].prefix; // fallback: hedef dil ana sayfa
-
-    window.location.href = mapped;
+  if (p.startsWith("/en/")) return "en";
+  if (p.startsWith("/de/")) return "de";
+  return "tr";
 }
+
+// GET PAGE NAME (prefix güvenli şekilde çıkarılır)
+function getPageName(path, prefix) {
+  path = path.toLowerCase();
+
+  if (path.startsWith(prefix.toLowerCase())) {
+    path = path.substring(prefix.length);
+  }
+
+  if (path === "" || path === "/" || path === "//") {
+    return "index.html";
+  }
+
+  if (path.startsWith("/")) path = path.substring(1);
+
+  return path;
+}
+
+// SWITCH LANGUAGE (FINAL)
+function switchLanguage(targetLang) {
+  const currentUrl = window.location.pathname;
+  const currentLang = detectCurrentLang();
+
+  const pageName = getPageName(currentUrl, langMap[currentLang].prefix);
+
+  const mapped =
+    langMap[currentLang].pages?.[pageName]?.[targetLang] ||
+    langMap[targetLang].prefix;
+
+  let finalUrl = mapped.replace(/\/{2,}/g, "/");
+  if (finalUrl.endsWith("/index.html")) finalUrl = finalUrl.replace("/index.html", "/");
+
+  window.location.href = finalUrl;
+}
+
+// SELECT LISTENER
+document.getElementById("languageSelect")?.addEventListener("change", function () {
+  switchLanguage(this.value);
+});

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Teeth House | Dental Clinic</title>
+    <title>Teeth House | Ağız ve Diş Sağlığı Merkezi</title>
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,12 +19,12 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 
     <!-- CSS Connection -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     
     <!-- Recaptcha Connection -->
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdTKBYsAAAAAGGYqF8m-wpi_bp1AFPzrt8I-LcA"></script>
 
-    <!-- Google Tag Manager -->
+<!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
@@ -43,133 +43,161 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-
+            <!-- Logo (sola yaslı) -->
             <a class="navbar-brand" href="#">
-                <img src="/img/teethouse_logo_1.png" alt="Logo">
+                <img src="img/teethouse_logo_1.png" alt="Logo">
             </a>
 
+            <!-- Mobil menü butonu -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
+            <!-- Menü öğeleri -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="/EN/index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="/EN/about.html">About Us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/EN/treatments/treatments.html">Treatments</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/EN/blog/blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Anasayfa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="hakkimizda.html">Hakkımızda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/tedaviler/tedaviler.html">Tedaviler</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/blog/blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-section">İletişim</a>
+                    </li>
                 </ul>
 
+                <!-- Randevu butonu (sağa yaslı) -->
                 <div class="navbar-randevu">
                     <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#randevuModal">
-                        <i class="bi bi-calendar-check"></i> Make an Appointment
+                        <i class="bi bi-calendar-check"></i> Randevu Al
                     </a>
                 </div>
                 
                 <!-- Language Switcher Start -->
-                <div class="lang-toggle d-flex justify-content-center mt-2 mt-md-0 ms-0 ms-md-3">
-                    <select id="languageSelect">
-                        <option value="tr">TR</option>
-                        <option value="en">EN</option>
-                        <option value="de">DE</option>
-                    </select>
-                </div>
-                <!-- Language Switcher End -->
+                <div class="lang-toggle-wrapper">
+                    <label class="lang-switch">
+                        <input type="checkbox" id="langSwitch" aria-label="Dil seçici: English / Türkçe">
+                        <span class="lang-slider">
+                            <span class="lang-left">EN</span>
+                            <span class="lang-right">TR</span>
+                        </span>
+                    </label>
+                </div><!-- Language Switcher End -->
                 
             </div>
         </div>
     </nav>
 
-    <!-- Main content -->
+    <!-- İçerik bölümü -->
     <main class="container-fluid my-1">
         <div class="row p-2 p-md-3">
 
+
+
+
             <section class="bg-custom-ligh rounded-4 p-4">
                 <div class="row g-4 align-items-center">
-                    <!-- LEFT: Text -->
+                    <!-- SOL: Metinler -->
                     <div class="col-lg-6">
                         <div class="d-flex gap-2 mb-3">
                             <span class="badge rounded-pill text-bg-light border fw-medium">
-                                <i class="bi bi-arrow-bar-right me-1"></i> Who We Are
+                                <i class="bi bi-arrow-bar-right me-1"></i> Biz Kimiz
                             </span>
                         </div>
 
+
                         <h1 class="h2 fw-3 display-8 m-0 text-shadpw-light">
-                            About Us
+                            Hakkımızda
                         </h1>
 
+
                         <p class="mb-4">
-                            Our clinic started providing professional dental services in 2021 in Antalya / Alanya / Avsallar region.
+                            Kliniğimiz 2021 yılında ağız ve diş sağlığında profesyonel kadrosuyla Antalya / Alanya/ Avsallar bölgesinde hizmet vermeye başlamıştır.
                         </p>
 
                         <p class="mb-4">
-                            With our belief in the importance of proper diagnosis, planning, and treatment in oral care, we continue our work in our clinics with joy and satisfaction derived from our profession and our dear patients.
+                            Ağız ve diş sağlığı doğru teşhis, planlama ve tedavinin önemine olan inancımızla, kliniklerimizde; mesleğimizden ve siz sevgili hastalarımızdan aldığımız mutluluk ve keyifle çalışmalarımızı sürdürüyoruz.
                         </p>
 
                         <p class="mb-4">
-                            Experienced dentists at our clinic perform implant and aesthetic dental treatments.
+                            İmplant ve estetik diş uygulamalarını, mesleğinde deneyimli hekimlerimiz uygulamaktadır.
                         </p>
 
                         <p class="mb-4">
-                            General dentistry procedures (teeth cleaning, root canal treatment, fillings), implant treatments, aesthetic dental applications (bonding, laser teeth whitening, laminate crowns, crowns, bridges) and prosthetic applications are carried out with great care and attention.
+                            Kliniğimizde genel diş hekimliği uygulamaları (diş temizliği, kanal tedavisi, dolgu), implant uygulaması, estetik diş hekimliği uygulamaları (bonding, lazerle diş beyazlatma, laminete kronlar, kronlar, köprüler) protetik uygulamalar büyük bir özen ve titizlikle yapılmaktadır.
                         </p>
+
+
                     </div>
 
-                    <!-- RIGHT: Image -->
+                    <!-- SAĞ: Görsel -->
                     <div class="col-lg-6 hero-photo-wrap">
                         <div class="position-relative">
-                            <img src="../img/photogallery/dis_tedavisi_dental_clinic_5.jpg" alt="dental clinic" class="hero-photo w-100">
+                            <img src="img/photogallery/dis_tedavisi_dental_clinic_5.jpg" alt="dental clinic" class="hero-photo w-100">
 
-                            <!-- bottom buttons -->
+
+
+                            <!-- alt şerit butonlar -->
                             <div class="w-100 position-absolute start-0 bottom-0 p-3">
                                 <div class="d-flex gap-2 flex-wrap">
+
                                     <a class="glass btn btn-sm rounded-pill px-3 py-2 d-inline-flex align-items-center gap-2" href="#">
-                                        <i class="bi bi-heart"></i> Our Patients' Happiness is Our Joy
+                                        <i class="bi bi-heart"></i> Hastalarımızın Keyfi Bizim Mutluluğumuz
                                     </a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </section>
 
         </div>
 
-        <!-- Contact Section -->
+        <!-- İletişim Bölümü -->
         <div class="row mt-5" id="contact-section">
             <div class="col-md-6">
-                <h2 class="display-3 ms-1 mt-5">Contact Us<span class="text-green">.</span></h2>
+                <h2 class="display-3 ms-1 mt-5">Bize Ulaşın<span class="text-green">.</span></h2>
 
-                <!-- Address -->
+                <!-- Adres -->
                 <div class="contact-item d-flex align-items-center rounded-3">
                     <i class="bi bi-geo-alt-fill contact-icon"></i>
                     <div>
-                        <h5>Address</h5>
+                        <h5>Adres</h5>
                         <p class="mb-0">
-                            Avsallar Mah. Hamdi St. Meydan Residences Block B No:2,<br> 07410 Alanya/Antalya
+                            Avsallar Mahallesi Hamdi Cad. Meydan Konutları Sitesi B Blok No:2,<br> 07410 Alanya/Antalya
+
                         </p>
                     </div>
                 </div>
 
-                <!-- Phone -->
+                <!-- Telefon -->
                 <div class="contact-item d-flex align-items-center rounded-3">
                     <i class="bi bi-telephone-fill contact-icon"></i>
                     <div>
-                        <h5>Phone</h5>
+                        <h5>Telefon</h5>
                         <p class="mb-0">
                             <a href="tel:+905441660707" class="text-decoration-none color-inherit"> +90 544 166 07 07</a><br>
+
                         </p>
                     </div>
                 </div>
 
-                <!-- Email -->
+                <!-- E-posta -->
                 <div class="contact-item d-flex align-items-center rounded-3">
                     <i class="bi bi-envelope-fill contact-icon"></i>
                     <div>
-                        <h5>Email</h5>
+                        <h5>E-posta</h5>
                         <p class="mb-0">
                             <a href="mailto:iletisim@teethouse.com" class="text-decoration-none color-inherit">iletisim@teethouse.com</a><br>
+
                         </p>
                     </div>
                 </div>
@@ -185,56 +213,85 @@
 
         </div>
 
+
     </main>
 
     <footer class="mt-5">
         <div class="col-12 p-4 text-center">
-            Teeth House Dental Clinic © 2025 | All Rights Reserved.
+            Teeth House Ağız ve Diş Sağlığı Polikliniği © 2025 | Tüm Hakları Saklıdır.
         </div>
     </footer>
 
     <!-- Bootstrap 5 JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Appointment Modal -->
-    <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentLabel" aria-hidden="true">
+    <!-- Tarih Girdisi -->
+    <script>
+        // Function to format date in Turkish
+        function formatTurkishDate(date) {
+            const months = [
+                "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran",
+                "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"
+            ];
+            return date.getDate() + " " + months[date.getMonth()] + ", " + date.getFullYear();
+        }
+
+        // Get current date and update the element
+        const currentDate = new Date();
+        document.getElementById('current-date').innerHTML = `<strong>${formatTurkishDate(currentDate)}</strong>`;
+
+        // Update service hours based on day of week
+        const dayOfWeek = currentDate.getDay(); // 0 = Sunday, 6 = Saturday
+        const serviceHoursElement = document.getElementById('service-hours');
+
+        if (dayOfWeek >= 1 && dayOfWeek <= 5) { // Weekday (Monday to Friday)
+            serviceHoursElement.textContent = "Bugün 08:00 - 17:00 Saatlerinde Hizmetinizdeyiz.";
+        } else { // Weekend
+            serviceHoursElement.textContent = "Bugün kliniğimiz kapalıdır";
+        }
+    </script>
+
+
+
+    <!-- Randevu Modal -->
+    <div class="modal fade" id="randevuModal" tabindex="-1" aria-labelledby="randevuLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content rounded-4 shadow">
                 <div class="modal-header">
-                    <h5 class="modal-title fw-bold" id="appointmentLabel">Appointment Form</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title fw-bold" id="randevuLabel">Randevu Formu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Kapat"></button>
                 </div>
                 <div class="modal-body">
 
-                    <form id="appointment-form" class="needs-validation" method="POST" action="../randevu/mail-gonder.php" novalidate>
+                    <form id="randevu-formu" class="needs-validation" method="POST" action="randevu/mail-gonder.php" novalidate>
 
                         <div class="mb-3">
-                            <label for="fullName" class="form-label">Full Name</label>
-                            <input type="text" class="form-control" id="fullName" name="fullName" required>
+                            <label for="adSoyad" class="form-label">Ad Soyad</label>
+                            <input type="text" class="form-control" id="adSoyad" name="adSoyad" required>
                         </div>
 
                         <div class="mb-3">
-                            <label for="phone" class="form-label">Phone</label>
-                            <input type="tel" class="form-control" id="phone" name="phone" required>
+                            <label for="telefon" class="form-label">Telefon</label>
+                            <input type="tel" class="form-control" id="telefon" name="telefon" required>
                         </div>
 
                         <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
+                            <label for="email" class="form-label">E-posta</label>
                             <input type="email" class="form-control" id="email" name="email" required>
                         </div>
 
                         <div class="mb-3">
-                            <label for="date" class="form-label">Appointment Date</label>
-                            <input type="date" class="form-control" id="date" name="date" required>
+                            <label for="tarih" class="form-label">Randevu Tarihi</label>
+                            <input type="date" class="form-control" id="tarih" name="tarih" required>
                         </div>
 
                         <div class="mb-3">
-                            <label for="message" class="form-label">Note / Message (Optional)</label>
-                            <textarea class="form-control" id="message" name="message"></textarea>
+                            <label for="mesaj" class="form-label">Not / Mesaj (Opsiyonel)</label>
+                            <textarea class="form-control" id="mesaj" name="mesaj"></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-success g-recaptcha" data-sitekey="6LdTKBYsAAAAAGGYqF8m-wpi_bp1AFPzrt8I-LcA" data-callback='onSubmit' data-action='submit'>
-                            Send Appointment
+                            Randevu Gönder
                         </button>
 
                     </form>
@@ -261,20 +318,27 @@
         })()
     </script>
 
-    <!-- Recaptcha Script -->
+
+    <!-- Recaptcha Scriptleri Start -->
     <script>
         function onSubmit(token) {
-            document.getElementById("appointment-form").submit();
+            document.getElementById("randevu-formu").submit();
         }
     </script>
-    
+    <!-- Recaptcha Scriptleri End -->
+
+    <!-- Lang Switcher Start -->
     <script src="/js/lang-map.js"></script>
     <script src="/js/main.js"></script>
+    <!-- Lang Switcher End -->
+
 
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/905441660707" class="btn btn-success rounded-circle shadow d-flex align-items-center justify-content-center" target="_blank" style="position: fixed; bottom: 80px; right: 20px; width: 60px; height: 60px; z-index: 9999;">
         <i class="bi bi-whatsapp fs-2"></i>
     </a>
+
+
 
 </body>
 

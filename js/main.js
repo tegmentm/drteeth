@@ -1,3 +1,4 @@
+document.getElementById("languageSelect").value = detectCurrentLang();
 
 
 // Lang Switcher START

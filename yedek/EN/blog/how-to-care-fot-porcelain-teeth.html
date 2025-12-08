@@ -5,7 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Teeth House | Dental Clinic</title>
+    <!-- Meta Title & Description -->
+    <title>How to Care for Porcelain Teeth? | Teeth House</title>
+    <meta name="description" content="Get detailed information on proper brushing, flossing, mouthwash, and night guard usage to keep your porcelain teeth long-lasting and healthy.">
+
+    <!-- Keywords -->
+    <meta name="keywords" content="porcelain teeth care, how to clean porcelain teeth, porcelain teeth brushing, porcelain teeth toothpaste, porcelain teeth floss, porcelain teeth mouthwash, porcelain teeth night guard">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "How to Care for Porcelain Teeth?",
+            "description": "Learn all the details about proper brushing, suitable toothpaste, flossing, mouthwash, and night guard usage in porcelain teeth care.",
+            "author": {
+                "@type": "Person",
+                "name": "Dt. Tahir Korkmaz"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "Teethouse Dental Clinic",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://teethouse.com/img/teethouse_logo_1.png"
+                }
+            },
+            "datePublished": "2025-09-04",
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": "https://teethouse.com/EN/blog/how-to-care-fot-porcelain-teeth.html"
+            }
+        }
+    </script>
+
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,56 +52,10 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 
     <!-- CSS Connection -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     
     <!-- Recaptcha Connection -->
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdTKBYsAAAAAGGYqF8m-wpi_bp1AFPzrt8I-LcA"></script>
-
-    <style>
-        .gallery-title {
-            font-size: 2.6rem;
-            font-weight: 700;
-            margin-top: 2rem;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .gallery-sub {
-            text-align: center;
-            color: #555;
-            margin-bottom: 3rem;
-        }
-
-        .gallery-img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            border-radius: 12px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .gallery-img:hover {
-            transform: scale(1.03);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .tag {
-            background: var(--color-green);
-            color: white;
-            font-size: 0.75rem;
-            padding: 4px 10px;
-            border-radius: 20px;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-weight: 600;
-        }
-
-        .img-card {
-            position: relative;
-        }
-    </style>
-
 
 <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -80,7 +67,7 @@
 
 </head>
 
-<body>
+<body class="bg-custom-light">
     
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MS28HMQC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -91,7 +78,7 @@
         <div class="container">
             <!-- Logo (left aligned) -->
             <a class="navbar-brand" href="#">
-                <img src="../img/teethouse_logo_1.png" alt="Logo">
+                <img src="/img/teethouse_logo_1.png" alt="Logo">
             </a>
 
             <!-- Mobile menu button -->
@@ -99,13 +86,12 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Menu items -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link" href="/EN/index.html">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="/EN/about.html">About Us</a></li>
                     <li class="nav-item"><a class="nav-link" href="/EN/treatments/treatments.html">Treatments</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/EN/blog/blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/EN/blog/blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contact-section">Contact</a></li>
                 </ul>
 
@@ -116,14 +102,15 @@
                 </div>
                 
                 <!-- Language Switcher Start -->
-                <div class="lang-toggle d-flex justify-content-center mt-2 mt-md-0 ms-0 ms-md-3">
-                    <select id="languageSelect">
-                        <option value="tr">TR</option>
-                        <option value="en">EN</option>
-                        <option value="de">DE</option>
-                    </select>
-                </div>
-                <!-- Language Switcher End -->
+                <div class="lang-toggle-wrapper">
+                    <label class="lang-switch">
+                        <input type="checkbox" id="langSwitch" aria-label="Language selector: English / Turkish">
+                        <span class="lang-slider">
+                            <span class="lang-left">EN</span>
+                            <span class="lang-right">TR</span>
+                        </span>
+                    </label>
+                </div><!-- Language Switcher End -->
                 
             </div>
         </div>
@@ -131,79 +118,78 @@
 
     <!-- Content section -->
     <main class="container-fluid my-1">
+
+
+
+
+
         <div class="row">
-            <div class="col-12 py-4" style="background-image: url(../img/hexagons-background-left.png); background-position: left bottom; background-repeat: no-repeat;">
-                <div class="d-flex gap-2 mb-3">
-                    <span class="badge rounded-pill text-bg-light border fw-medium">
-                        <i class="bi bi-arrow-bar-right me-1"></i> Moments from us
-                    </span>
-                </div>
+            <div class="col-lg-8 mx-auto">
+                <!-- Back to blog link -->
+                <a href="/EN/blog/blog.html" class="back-to-blog mb-4">
+                    <i class="bi bi-arrow-left me-2"></i> Back to Blog
+                </a>
 
-                <h1 class="h2 fw-3 display-8 m-0 text-shadpw-light">
-                    <span class="text-green">Photo</span>Gallery
-                </h1>
+                <!-- Article Header -->
+                <header class="article-header p-3">
+                    <h1 class="article-title">How to Care for Porcelain Teeth?</h1>
+                    <div class="article-meta">
+                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'><circle cx='20' cy='20' r='20' fill='%23e9ecef'/><text x='20' y='24' font-family='Arial' font-size='14' fill='%236c757d' text-anchor='middle'>DT</text></svg>" alt="Author" class="rounded-circle me-2" width="40" height="40">
+                        <span class="me-3">Dt TAHİR KORKMAZ</span>
+                    </div>
+                </header>
+
+                <!-- Featured Image -->
+                <img src="/img/porselen_dis_bakimi.jpg" class="article-img w-100" alt="Dental Implant Healing Process">
+
+                <!-- Article Content -->
+                <article class="article-content">
+
+
+
+                    <p>
+                        There is no difference between porcelain teeth care and regular oral-dental health care practices. There are only a few separate issues that require more attention. Whether you have porcelain teeth or not, you should brush your teeth two or three times a day. However, you should stay away from the wrong brush choice that many individuals make. You should get help from your dentist to determine the best brush suitable for your general oral-dental health, gum health, tooth structure, etc. In this regard, many of our patients make the mistake of buying and using the first toothbrush they come across. We can continue to explain the toothbrush and other factors regarding proper porcelain teeth care by summarizing them in the subheadings listed below.</p>
+
+                    <h2>Toothbrush in Porcelain Teeth Care</h2>
+                    <p>
+                        Whether porcelain or natural, you should get support from your dentist to determine the most suitable toothbrush for you. Using the right toothbrush is very important for healthy porcelain teeth care - oral care. You should brush your teeth two to three times a day. Do not interrupt the routine of tooth brushing for proper oral-dental health. You should spend about two minutes brushing your teeth. If you have eaten or drunk before brushing, brush after waiting at least half an hour.</p>
+
+                    <h2>Toothpaste in Porcelain Teeth Care</h2>
+                    <p>
+                        Do not forget to get the most suitable toothpaste recommendation from your dentist. Stay away from all other toothpastes, tooth powders, etc. products other than the recommended toothpaste. Do not use products with hearsay information for healthy oral-dental health.</p>
+
+                    <h2>Dental Floss in Porcelain Teeth Care</h2>
+                    <p>
+                        Dental floss is one of the basic care products that all individuals should use, whether natural or porcelain. You will be informed by your dentist about using dental floss. Necessary guidance will also be provided on how to use it. Do not neglect the use of dental floss for maximum oral-dental health.</p>
+
+                    <h2>Mouthwash in Porcelain Teeth Care</h2>
+                    <p>
+                        Mouthwashes are very valuable products for both natural teeth, porcelain teeth, and oral health-care. You should continue to use mouthwash at least once a day without neglecting its use. Mouthwashes, which are supporters of oral hygiene, have many positive effects, from preventing bad breath, preventing tooth decay, increasing oral care and protection, to supporting the existing whiteness of both porcelain and natural teeth.</p>
+
+                    <h2>Night Guard in Porcelain Teeth Care</h2>
+                    <p>
+                        Your dentist has already informed you before the porcelain tooth application. Porcelain teeth are not suitable for individuals who have habits such as teeth grinding - teeth clenching at night. However, if such harmful habits of yours are at a low level, porcelain tooth treatment may have been deemed appropriate by your doctor. If you have teeth grinding - teeth clenching, you need to use a night guard before sleeping at night for the health of both your porcelain teeth and your natural teeth. Otherwise, you may not get sufficient and long-term efficiency from your porcelain teeth.</p>
+
+                    <h2>Other Information About Porcelain Teeth Care</h2>
+                    <ul>
+                        <li>Avoid eating - breaking hard-shelled foods on front porcelain teeth.</li>
+                        <li>Do not apply excessive pressure while brushing.</li>
+                        <li>Use mouthwashes. This way you can also support the preservation of your teeth's whiteness.</li>
+                        <li>Do not eat or drink anything (until the next meal) after brushing your teeth except water.</li>
+                        <li>Do not brush your teeth directly after eating - after any drink. Wait half an hour to brush your teeth. The acids in foods soften the tooth enamel during eating - drinking, and if brushed directly, the tooth surface is damaged.</li>
+
+                    </ul>
+
+                </article>
+
+
 
             </div>
         </div>
 
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="img-card">
-                    <span class="tag">Treatment</span>
-                    <img data-bs-toggle="modal" data-bs-target="#imgModal" src="../img/photogallery/dis_tedavisi_dental_clinic.jpg" class="gallery-img" />
-                </div>
-            </div>
 
-            <div class="col-md-4">
-                <div class="img-card">
-                    <span class="tag">Treatment</span>
-                    <img data-bs-toggle="modal" data-bs-target="#imgModal" src="../img/photogallery/dis_tedavisi_dental_clinic_2.jpg" class="gallery-img" />
-                </div>
-            </div>
 
-            <div class="col-md-4">
-                <div class="img-card">
-                    <span class="tag">Clinic</span>
-                    <img data-bs-toggle="modal" data-bs-target="#imgModal" src="../img/photogallery/dis_tedavisi_dental_clinic_3.jpg" class="gallery-img" />
-                </div>
-            </div>
 
-            <div class="col-md-4">
-                <div class="img-card">
-                    <span class="tag">Treatment</span>
-                    <img data-bs-toggle="modal" data-bs-target="#imgModal" src="../img/photogallery/dis_tedavisi_dental_clinic_4.jpg" class="gallery-img" />
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="img-card">
-                    <span class="tag">Clinic</span>
-                    <img data-bs-toggle="modal" data-bs-target="#imgModal" src="../img/photogallery/dis_tedavisi_dental_clinic_5.jpg" class="gallery-img" />
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="img-card">
-                    <span class="tag">Waiting Room</span>
-                    <img data-bs-toggle="modal" data-bs-target="#imgModal" src="../img/photogallery/rest_room_2_dental_clinic.jpg" class="gallery-img" />
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="img-card">
-                    <span class="tag">Waiting Room</span>
-                    <img data-bs-toggle="modal" data-bs-target="#imgModal" src="../img/photogallery/rest_room_dental_clinic.jpg" class="gallery-img" />
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="img-card">
-                    <span class="tag">Team</span>
-                    <img data-bs-toggle="modal" data-bs-target="#imgModal" src="../img/photogallery/staff_dental_clinic.jpg" class="gallery-img" />
-                </div>
-            </div>
-        </div>
-        <!--gallery end-->
 
 
 
@@ -219,6 +205,7 @@
                         <h5>Address</h5>
                         <p class="mb-0">
                             Avsallar Mahallesi Hamdi Cad. Meydan Konutları Sitesi B Blok No:2,<br> 07410 Alanya/Antalya
+
                         </p>
                     </div>
                 </div>
@@ -230,6 +217,7 @@
                         <h5>Phone</h5>
                         <p class="mb-0">
                             <a href="tel:+905441660707" class="text-decoration-none color-inherit"> +90 544 166 07 07</a><br>
+
                         </p>
                     </div>
                 </div>
@@ -240,7 +228,8 @@
                     <div>
                         <h5>Email</h5>
                         <p class="mb-0">
-                            <a href="mailto:contact@teethouse.com" class="text-decoration-none color-inherit">iletisim@teethouse.com</a><br>
+                            <a href="mailto:iletisim@teethouse.com" class="text-decoration-none color-inherit">iletisim@teethouse.com</a><br>
+
                         </p>
                     </div>
                 </div>
@@ -267,26 +256,6 @@
 
 
 
-
-    <!-- Modal -->
-    <div class="modal fade" id="imgModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content bg-dark">
-                <div class="modal-body p-0">
-                    <img id="modalImage" src="" class="w-100" />
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
     <!-- Appointment Modal -->
     <div class="modal fade" id="randevuModal" tabindex="-1" aria-labelledby="randevuLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -297,7 +266,7 @@
                 </div>
                 <div class="modal-body">
 
-                    <form id="randevu-formu" class="needs-validation" method="POST" action="appointment/send-mail.php" novalidate>
+                    <form id="randevu-formu" class="needs-validation" method="POST" action="/randevu/mail-gonder.php" novalidate>
 
                         <div class="mb-3">
                             <label for="adSoyad" class="form-label">Full Name</label>
@@ -336,11 +305,8 @@
     </div>
 
 
-
     <!-- Bootstrap 5 JS Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
 
     <!-- Bootstrap Form Validation Script -->
     <script>
@@ -358,37 +324,24 @@
             })
         })()
     </script>
-    <!-- Bootstrap Form Validation Script END-->
 
-    <!-- Photo Gallery Script START-->
-    <script>
-        document.querySelectorAll('.gallery-img').forEach(img => {
-            img.style.cursor = 'pointer';
-            img.addEventListener('click', () => {
-                const modalImg = document.getElementById('modalImage');
-                modalImg.src = img.src;
-                const modal = new bootstrap.Modal(document.getElementById('imgModal'));
-                modal.show();
-            });
-        });
-    </script>
-    <!-- Photo Gallery Script END-->
-
-    <!-- Recaptcha Scripts Start -->
+    <!-- Recaptcha Scriptleri Start -->
     <script>
         function onSubmit(token) {
             document.getElementById("randevu-formu").submit();
         }
     </script>
-    <!-- Recaptcha Scripts End -->
+    <!-- Recaptcha Scriptleri End -->
 
-
+    <!-- Lang Switcher Start -->
+    <script src="/js/lang-map.js"></script>
+    <script src="/js/main.js"></script>
+    <!-- Lang Switcher End -->
 
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/905441660707" class="btn btn-success rounded-circle shadow d-flex align-items-center justify-content-center" target="_blank" style="position: fixed; bottom: 80px; right: 20px; width: 60px; height: 60px; z-index: 9999;">
         <i class="bi bi-whatsapp fs-2"></i>
     </a>
-
 
 
 </body>
