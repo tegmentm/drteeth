@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blog | Teeth House | Zentrum für Mund- und Zahngesundheit</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- Font Connection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+    <!-- CSS Connection -->
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <!-- Recaptcha Connection -->
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdTKBYsAAAAAGGYqF8m-wpi_bp1AFPzrt8I-LcA"></script>
+
+    <style>
+        .blog-header {
+            background-color: #01CD8C;
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .blog-card {
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-meta {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+
+        .sidebar .card {
+            border: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .sidebar .card-title {
+            font-size: 1.1rem;
+            border-bottom: 2px solid #01CD8C;
+            padding-bottom: .5rem;
+        }
+    </style>
+
+
+<!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-MS28HMQC');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+
+<body class="bg-custom-light">
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MS28HMQC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="/img/teethouse_logo_1.png" alt="Logo">
+            </a>
+
+            <!-- Mobil menü butonu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menü öğeleri -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/DE/index.html">Startseite</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/DE/uber-uns.html">Über uns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/DE/behandlungen/behandlungen.html">Behandlungen</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/DE/blog/blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-section">Kontakt</a>
+                    </li>
+                </ul>
+
+                <!-- Randevu butonu -->
+                <div class="navbar-randevu">
+                    <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#randevuModal">
+                        <i class="bi bi-calendar-check"></i> Termin Vereinbaren
+                    </a>
+                </div>
+
+                <!-- Language Switcher -->
+                <div class="lang-toggle d-flex justify-content-center mt-2 mt-md-0 ms-0 ms-md-3">
+                    <select id="languageSelect">
+                        <option value="tr">TR</option>
+                        <option value="en">EN</option>
+                        <option value="de">DE</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- İçerik bölümü -->
+    <main class="container-fluid my-1">
+        <div class="row">
+            <div class="col-12 py-4" style="background-image: url(/img/hexagons-background-left.png); background-position: left bottom; background-repeat: no-repeat;">
+                <div class="d-flex gap-2 mb-3">
+                    <span class="badge rounded-pill text-bg-light border fw-medium">
+                        <i class="bi bi-arrow-bar-right me-1"></i> Blog
+                    </span>
+                </div>
+
+                <h1 class="h2 fw-3 display-8 m-0 text-shadpw-light">
+                    <span class="text-green">Zahngesundheits</span>-Blog  
+                </h1>
+
+                <p>
+                    Tipps und aktuelle Inhalte für Ihre Mund- und Zahngesundheit  
+                </p>
+            </div>
+        </div>
+
+
+
+        <div class="row g-4">
+
+            <!-- Blog Yazıları -->
+            <div class="col-lg-8">
+                <div class="row g-4">
+
+                    <!-- Blog Kartı -->
+                    <div class="col-md-6">
+                        <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                            <img src="/img/lamine_dis_kaplama.jpg" class="card-img-top rounded-top-4" alt="Lamine Diş Kaplama">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Was ist eine Laminat-Verblendung und wie wird sie durchgeführt?</h5>  
+                                <p class="card-text">Details zur Laminat-Verblendung, zum Heilungsprozess und zu wichtigen Informationen danach...</p>  
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <p class="blog-meta mb-1">🖊️ ZA. Tahir KORKMAZ</p>  
+                                <a href="/DE/blog/laminiertes-dentalfurnier.html" class="btn btn-outline-success btn-sm">Weiterlesen</a>  
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Kartı -->
+                    <div class="col-md-6">
+                        <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                            <img src="/img/protez_dis_tedavisi.jpg" class="card-img-top rounded-top-4" alt="Protez Diş Tedavisi">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Was ist eine Zahnprothese und wie wird sie hergestellt?</h5>  
+                                <p class="card-text">Zahnprothesen-Behandlung, Herstellungsprozess, Pflege und Heilungsprozess...</p>  
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <p class="blog-meta mb-1">🖊️ ZA. Tahir KORKMAZ</p>  
+                                <a href="/DE/blog/was-ist-ein-prothesenzahn-wie-wird-es-angewendet.html" class="btn btn-outline-success btn-sm">Weiterlesen</a>  
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Kartı -->
+                    <div class="col-md-6">
+                        <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                            <img src="/img/dis_implati_tedavisi.jpg" class="card-img-top rounded-top-4" alt="Diş İmplantı Tedavisi">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Wie lange dauert eine Zahnimplantat-Behandlung?</h5>  
+                                <p class="card-text">Entdecken Sie Schritt für Schritt den Ablauf, das Schmerzempfinden und Pflegetipps bei der Zahnimplantat-Behandlung...</p>  
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <p class="blog-meta mb-1">🖊️ ZA. Tahir KORKMAZ</p>  
+                                <a href="/DE/blog/wie-lange-dauert-eine-zahnimplantatbehandlung.html" class="btn btn-outline-success btn-sm">Weiterlesen</a>  
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Kartı -->
+                    <div class="col-md-6">
+                        <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                            <img src="/img/zirkonyum_dis_kaplama.jpg" class="card-img-top rounded-top-4" alt="Zirkonyum Diş Kaplama">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Was ist eine Zirkoniumkrone und wie wird sie hergestellt?</h5>  
+                                <p class="card-text">Was ist eine Zirkoniumkrone, wie wird sie hergestellt, wie lange hält sie und welche Vorteile bietet sie? Hier erfahren Sie, was Sie wissen müssen.</p>  
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <p class="blog-meta mb-1">🖊️ ZA. Tahir KORKMAZ</p>  
+                                <a href="/DE/blog/was-ist-zirkonium-zahnveneer-wie-wird-es-angewendet.html" class="btn btn-outline-success btn-sm">Weiterlesen</a>  
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Kartı -->
+                    <div class="col-md-6">
+                        <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                            <img src="/img/zirkonyum_dis_sureci.jpg" class="card-img-top rounded-top-4" alt="Zirkonyum Diş Tedavisi Süresi">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Wie lange dauert die Herstellung einer Zirkoniumkrone?</h5>  
+                                <p class="card-text">Erfahren Sie alle Schritte der Zirkoniumkronen-Anwendung und Details zum Ablauf...</p>  
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <p class="blog-meta mb-1">🖊️ ZA. Tahir KORKMAZ</p>  
+                                <a href="/DE/blog/wie-lange-dauert-die-zahnmedizinische-anwendung-von-zirkonium.html" class="btn btn-outline-success btn-sm">Weiterlesen</a>  
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Kartı -->
+                    <div class="col-md-6">
+                        <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                            <img src="/img/porselen_dis_bakimi.jpg" class="card-img-top rounded-top-4" alt="Porselen Diş Bakımı">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Wie pflegt man Porzellanzähne?</h5>  
+                                <p class="card-text">Die wichtigsten Schritte für die Porzellanzahn-Pflege: die richtige Bürste, geeignete Zahnpasta und regelmäßige Hygienemaßnahmen...</p>  
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <p class="blog-meta mb-1">🖊️ ZA. Tahir KORKMAZ</p>  
+                                <a href="/DE/blog/so-pflegen-sie-porzellanzahne.html" class="btn btn-outline-success btn-sm">Weiterlesen</a>  
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Kartı -->
+                    <div class="col-md-6">
+                        <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                            <img src="/img/dis_beyazlatma_suresi.jpg" class="card-img-top rounded-top-4" alt="Diş Beyazlatmanın Süresi">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Wie dauerhaft sind die Ergebnisse von Zahnaufhellung?</h5>  
+                                <p class="card-text">Methoden, um die Dauer des Weißeffekts nach der Zahnaufhellung durch richtiges Zähneputzen, Zahnseide und Lebensmittelauswahl zu verlängern...</p>  
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <p class="blog-meta mb-1">🖊️ ZA. Tahir KORKMAZ</p>  
+                                <a href="/DE/blog/wie-dauerhaft-ist-eine-zahnaufhellung.html" class="btn btn-outline-success btn-sm">Weiterlesen</a>  
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Kartı -->
+                    <div class="col-md-6">
+                        <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                            <img src="/img/dis_koprusu.jpg" class="card-img-top rounded-top-4" alt="Diş Köprüsü">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Was ist eine Zahnbrücke? Wie wird sie hergestellt?</h5>  
+                                <p class="card-text">Details zur Zahnbrücken-Anwendung, Brückentypen, funktionelle Vorteile...</p>  
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <p class="blog-meta mb-1">🖊️ ZA. Tahir KORKMAZ</p>  
+                                <a href="/DE/blog/was-ist-eine-zahnbrucke-wie-wird-sie-hergestellt.html" class="btn btn-outline-success btn-sm">Weiterlesen</a>  
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Kartı -->
+                    <div class="col-md-6">
+                        <div class="card blog-card h-100 shadow-sm border-0 rounded-4">
+                            <img src="/img/dis_tasi_temizligi.jpg" class="card-img-top rounded-top-4" alt="Diş Taşı Temizliği">
+                            <div class="card-body">
+                                <h5 class="card-title fw-semibold">Was ist Zahnstein? Wie wird er entfernt?</h5>  
+                                <p class="card-text">Wege, um Zahnstein- und Plaque-Bildung zu verhindern, Details zur professionellen Reinigung und richtigen Mundpflege...</p>  
+                            </div>
+                            <div class="card-footer bg-white border-0">
+                                <p class="blog-meta mb-1">🖊️ ZA. Tahir KORKMAZ</p>  
+                                <a href="/DE/blog/was-ist-zahnstein-wie-reinige-ich-es.html" class="btn btn-outline-success btn-sm">Weiterlesen</a>  
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Sayfalama -->
+                <!--<nav aria-label="Blog Sayfaları" class="mt-5">
+            <ul class="pagination justify-content-center">
+              <li class="page-item disabled"><a class="page-link">Önceki</a></li>
+              <li class="page-item active"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item"><a class="page-link" href="#">Sonraki</a></li>
+            </ul>
+          </nav>-->
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4 sidebar">
+
+                <!-- Son Yazılar -->
+                <div class="card p-3 rounded-4">
+                    <h5 class="card-title">Aktuelle Beiträge</h5>  
+                    <ul class="list-unstyled">
+                        <li><a href="/DE/blog/wie-dauerhaft-ist-eine-zahnaufhellung.html" class="text-decoration-none">Wie dauerhaft sind die Ergebnisse von Zahnaufhellung?</a></li>  
+                        <li><a href="/DE/blog/wie-lange-dauert-eine-zahnimplantatbehandlung.html" class="text-decoration-none">Wie lange dauert eine Zahnimplantat-Behandlung?</a></li>  
+                        <li><a href="/DE/blog/laminiertes-dentalfurnier.html" class="text-decoration-none">Was ist eine Laminat-Verblendung und wie wird sie durchgeführt?</a></li>  
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- İletişim Bölümü -->
+        <div class="row mt-5" id="contact-section">
+            <div class="col-md-6">
+                <h2 class="display-3 ms-1 mt-5">Kontaktieren Sie uns<span class="text-green">.</span></h2>  
+
+                <!-- Adres -->
+                <div class="contact-item d-flex align-items-center rounded-3">
+                    <i class="bi bi-geo-alt-fill contact-icon"></i>
+                    <div>
+                        <h5>Adresse</h5>  
+                        <p class="mb-0">
+                            Avsallar Mahallesi Hamdi Cad. Meydan Konutları Sitesi B Blok No:2,<br> 07410 Alanya/Antalya
+
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Telefon -->
+                <div class="contact-item d-flex align-items-center rounded-3">
+                    <i class="bi bi-telephone-fill contact-icon"></i>
+                    <div>
+                        <h5>Telefon</h5>  
+                        <p class="mb-0">
+                            <a href="tel:+905441660707" class="text-decoration-none color-inherit"> +90 544 166 07 07</a><br>
+
+                        </p>
+                    </div>
+                </div>
+
+                <!-- E-posta -->
+                <div class="contact-item d-flex align-items-center rounded-3">
+                    <i class="bi bi-envelope-fill contact-icon"></i>
+                    <div>
+                        <h5>E-Mail</h5>  
+                        <p class="mb-0">
+                            <a href="mailto:iletisim@teethouse.com" class="text-decoration-none color-inherit">iletisim@teethouse.com</a><br>
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 ps-md-3 mt-4 mt-md-0">
+                <div class="map-responsive rounded-3 shadow-sm overflow-hidden h-100 border">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.114797559564!2d31.773351575571784!3d36.62362327763368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dcaf9aa3a5dae7%3A0x7834d3ed68a58857!2sDr.%20Teeth%20Di%C5%9F%20Hekimi%20%2F%20Dentist%20%2FZahnarzt!5e0!3m2!1str!2str!4v1754736544904!5m2!1str!2str" width="100%" height="100%" style="border:0; min-height: 400px; display: block;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <footer class="mt-5">
+        <div class="col-12 p-4 text-center">
+            Teeth House Zentrum für Mund- und Zahngesundheit © 2025 | Alle Rechte vorbehalten.  
+        </div>
+    </footer>
+
+
+
+
+    <!-- Randevu Modal -->
+    <div class="modal fade" id="randevuModal" tabindex="-1" aria-labelledby="randevuLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="randevuLabel">Terminformular</h5>  
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>  
+                </div>
+                <div class="modal-body">
+
+                    <form id="randevu-formu" class="needs-validation" method="POST" action="/randevu/mail-gonder.php" novalidate>
+
+                        <div class="mb-3">
+                            <label for="adSoyad" class="form-label">Vor- und Nachname</label>  
+                            <input type="text" class="form-control" id="adSoyad" name="adSoyad" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="telefon" class="form-label">Telefon</label>  
+                            <input type="tel" class="form-control" id="telefon" name="telefon" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-Mail</label>  
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="tarih" class="form-label">Termindatum</label>  
+                            <input type="date" class="form-control" id="tarih" name="tarih" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mesaj" class="form-label">Notiz / Nachricht (optional)</label>  
+                            <textarea class="form-control" id="mesaj" name="mesaj"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-success g-recaptcha" data-sitekey="6LdTKBYsAAAAAGGYqF8m-wpi_bp1AFPzrt8I-LcA" data-callback='onSubmit' data-action='submit'>
+                            Termin Senden  
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Bootstrap Form Validation Script -->
+    <script>
+        (() => {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+
+    <!-- Recaptcha Scriptleri Start -->
+    <script>
+        function onSubmit(token) {
+            document.getElementById("randevu-formu").submit();
+        }
+    </script>
+    <!-- Recaptcha Scriptleri End -->
+    
+    <!-- Lang Switcher Start -->
+    <script src="/js/lang-map.js"></script>
+    <script src="/js/main.js"></script>
+    <!-- Lang Switcher End -->
+
+
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/905441660707" class="btn btn-success rounded-circle shadow d-flex align-items-center justify-content-center" target="_blank" style="position: fixed; bottom: 80px; right: 20px; width: 60px; height: 60px; z-index: 9999;">
+        <i class="bi bi-whatsapp fs-2"></i>
+    </a>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
