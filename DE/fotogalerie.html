@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Teeth House | Mund- und Zahngesundheitszentrum</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- Font Connection -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+    <!-- CSS Connection -->
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Recaptcha Connection -->
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdTKBYsAAAAAGGYqF8m-wpi_bp1AFPzrt8I-LcA"></script>
+
+    <style>
+        .gallery-title {
+            font-size: 2.6rem;
+            font-weight: 700;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .gallery-sub {
+            text-align: center;
+            color: #555;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .tag {
+            background: var(--color-green);
+            color: white;
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-weight: 600;
+        }
+
+        .img-card {
+            position: relative;
+        }
+    </style>
+
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MS28HMQC');
+    </script>
+    <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MS28HMQC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="/img/teethouse_logo_1.png" alt="Logo">
+            </a>
+
+            <!-- Mobil menü butonu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menü öğeleri -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/DE/index.html">Startseite</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/DE/uber-uns.html">Über uns</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/DE/behandlungen/behandlungen.html">Behandlungen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/DE/blog/blog.html">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-section">Kontakt</a>
+                    </li>
+                </ul>
+
+                <!-- Randevu butonu -->
+                <div class="navbar-randevu">
+                    <a href="#" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#randevuModal">
+                        <i class="bi bi-calendar-check"></i> Termin Vereinbaren
+                    </a>
+                </div>
+
+                <!-- Language Switcher -->
+                <div class="lang-toggle d-flex justify-content-center mt-2 mt-md-0 ms-0 ms-md-3">
+                    <select id="languageSelect">
+                        <option value="tr">TR</option>
+                        <option value="en">EN</option>
+                        <option value="de" selected>DE</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- İçerik bölümü -->
+    <main class="container-fluid my-1">
+        <div class="row">
+            <div class="col-12 py-4" style="background-image: url(/img/hexagons-background-left.png); background-position: left bottom; background-repeat: no-repeat;">
+                <div class="d-flex gap-2 mb-3">
+                    <span class="badge rounded-pill text-bg-light border fw-medium">
+                        <i class="bi bi-arrow-bar-right me-1"></i> Einblicke aus unserer Klinik
+                    </span>
+                </div>
+
+                <h1 class="h2 fw-3 display-8 m-0 text-shadpw-light">
+                    <span class="text-green">Foto</span>Galerie
+                </h1>
+
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="img-card">
+                    <span class="tag">Behandlung</span>
+                    <img data-bs-toggle="modal" data-bs-target="#imgModal" src="/img/photogallery/dis_tedavisi_dental_clinic.jpg" class="gallery-img" />
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="img-card">
+                    <span class="tag">Behandlung</span>
+                    <img data-bs-toggle="modal" data-bs-target="#imgModal" src="/img/photogallery/dis_tedavisi_dental_clinic_2.jpg" class="gallery-img" />
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="img-card">
+                    <span class="tag">Behandlungsraum</span>
+                    <img data-bs-toggle="modal" data-bs-target="#imgModal" src="/img/photogallery/dis_tedavisi_dental_clinic_3.jpg" class="gallery-img" />
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="img-card">
+                    <span class="tag">Behandlung</span>
+                    <img data-bs-toggle="modal" data-bs-target="#imgModal" src="/img/photogallery/dis_tedavisi_dental_clinic_4.jpg" class="gallery-img" />
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="img-card">
+                    <span class="tag">Behandlungsraum</span>
+                    <img data-bs-toggle="modal" data-bs-target="#imgModal" src="/img/photogallery/dis_tedavisi_dental_clinic_5.jpg" class="gallery-img" />
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="img-card">
+                    <span class="tag">Wartezimmer</span>
+                    <img data-bs-toggle="modal" data-bs-target="#imgModal" src="/img/photogallery/rest_room_2_dental_clinic.jpg" class="gallery-img" />
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="img-card">
+                    <span class="tag">Wartezimmer</span>
+                    <img data-bs-toggle="modal" data-bs-target="#imgModal" src="/img/photogallery/rest_room_dental_clinic.jpg" class="gallery-img" />
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="img-card">
+                    <span class="tag">Team</span>
+                    <img data-bs-toggle="modal" data-bs-target="#imgModal" src="/img/photogallery/staff_dental_clinic.jpg" class="gallery-img" />
+                </div>
+            </div>
+        </div>
+        <!--galeri son-->
+
+
+
+        <!-- İletişim Bölümü -->
+        <div class="row mt-5" id="contact-section">
+            <div class="col-md-6">
+                <h2 class="display-3 ms-1 mt-5">Kontaktieren Sie uns<span class="text-green">.</span></h2>
+
+                <!-- Adres -->
+                <div class="contact-item d-flex align-items-center rounded-3">
+                    <i class="bi bi-geo-alt-fill contact-icon"></i>
+                    <div>
+                        <h5>Adresse</h5>
+                        <p class="mb-0">
+                            Avsallar Mahallesi Hamdi Cad. Meydan Konutları Sitesi B Blok No:2,<br> 07410 Alanya/Antalya
+
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Telefon -->
+                <div class="contact-item d-flex align-items-center rounded-3">
+                    <i class="bi bi-telephone-fill contact-icon"></i>
+                    <div>
+                        <h5>Telefon</h5>
+                        <p class="mb-0">
+                            <a href="tel:+905441660707" class="text-decoration-none color-inherit"> +90 544 166 07 07</a><br>
+
+                        </p>
+                    </div>
+                </div>
+
+                <!-- E-posta -->
+                <div class="contact-item d-flex align-items-center rounded-3">
+                    <i class="bi bi-envelope-fill contact-icon"></i>
+                    <div>
+                        <h5>E-Mail</h5>
+                        <p class="mb-0">
+                            <a href="mailto:iletisim@teethouse.com" class="text-decoration-none color-inherit">iletisim@teethouse.com</a><br>
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-6 ps-md-3 mt-4 mt-md-0">
+                <div class="map-responsive rounded-3 shadow-sm overflow-hidden h-100 border">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3202.114797559564!2d31.773351575571784!3d36.62362327763368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14dcaf9aa3a5dae7%3A0x7834d3ed68a58857!2sDr.%20Teeth%20Di%C5%9F%20Hekimi%20%2F%20Dentist%20%2FZahnarzt!5e0!3m2!1str!2str!4v1754736544904!5m2!1str!2str" width="100%" height="100%" style="border:0; min-height: 400px; display: block;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <footer class="mt-5">
+        <div class="col-12 p-4 text-center">
+            Teeth House Mund- und Zahngesundheitspoliklinik © 2025 | Alle Rechte vorbehalten.
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="imgModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark">
+                <div class="modal-body p-0">
+                    <img id="modalImage" src="" class="w-100" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Randevu Modal -->
+    <div class="modal fade" id="randevuModal" tabindex="-1" aria-labelledby="randevuLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-4 shadow">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="randevuLabel">Terminformular</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Schließen"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form id="randevu-formu" class="needs-validation" method="POST" action="randevu/mail-gonder.php" novalidate>
+
+                        <div class="mb-3">
+                            <label for="adSoyad" class="form-label">Vor- und Nachname</label>
+                            <input type="text" class="form-control" id="adSoyad" name="adSoyad" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="telefon" class="form-label">Telefon</label>
+                            <input type="tel" class="form-control" id="telefon" name="telefon" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">E-Mail</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="tarih" class="form-label">Termindatum</label>
+                            <input type="date" class="form-control" id="tarih" name="tarih" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="mesaj" class="form-label">Notiz / Nachricht (Optional)</label>
+                            <textarea class="form-control" id="mesaj" name="mesaj"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-success g-recaptcha" data-sitekey="6LdTKBYsAAAAAGGYqF8m-wpi_bp1AFPzrt8I-LcA" data-callback='onSubmit' data-action='submit'>
+                            Termin senden
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap 5 JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <!-- Bootstrap Form Validation Script -->
+    <script>
+        (() => {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
+    <!-- Bootstrap Form Validation Script END-->
+
+    <!-- Fotogaleri Script START-->
+    <script>
+        document.querySelectorAll('.gallery-img').forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', () => {
+                const modalImg = document.getElementById('modalImage');
+                modalImg.src = img.src;
+                const modal = new bootstrap.Modal(document.getElementById('imgModal'));
+                modal.show();
+            });
+        });
+    </script>
+    <!-- Fotogaleri Script END-->
+
+    <!-- Recaptcha Scriptleri Start -->
+    <script>
+        function onSubmit(token) {
+            document.getElementById("randevu-formu").submit();
+        }
+    </script>
+    <!-- Recaptcha Scriptleri End -->
+
+    <!-- Lang Switcher Start -->
+    <script src="/js/lang-map.js"></script>
+    <script src="/js/main.js"></script>
+    <!-- Lang Switcher End -->
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/905441660707" class="btn btn-success rounded-circle shadow d-flex align-items-center justify-content-center" target="_blank" style="position: fixed; bottom: 80px; right: 20px; width: 60px; height: 60px; z-index: 9999;">
+        <i class="bi bi-whatsapp fs-2"></i>
+    </a>
+
+
+
+</body>
+
+</html>
