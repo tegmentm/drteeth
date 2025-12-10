@@ -5,107 +5,107 @@ const langMap = {
 
             "index.html": {
                 en: "/EN/index.html",
-                de: "/de/index.html"
+                de: "/DE/index.html"
             },
 
             "hakkimizda.html": {
                 en: "/EN/about.html",
-                de: "/de/uber-uns.html"
+                de: "/DE/uber-uns.html"
             },
 
             "fotogaleri.html": {
                 en: "/EN/photogallery.html",
-                de: "/DE/"
+                de: "/DE/fotogalerie.html"
             },
 
             "kadromuz.html": {
                 en: "/EN/team.html",
-                de: "/DE/"
+                de: "/DE/team.html"
             },
 
             "tedaviler/tedaviler.html": {
                 en: "/EN/treatments/treatments.html",
-                de: "/DE/"
+                de: "/DE/behandlungen/behandlungen.html"
             },
 
             "tedaviler/dis-poliklinigi.html": {
                 en: "/EN/treatments/dental-polyclinic.html",
-                de: "/DE/"
+                de: "/DE/behandlungen/zahnpoliklinik.html"
             },
 
             "tedaviler/implant-tedavisi.html": {
                 en: "/EN/treatments/implantology.html",
-                de: "/DE/"
+                de: "/DE/behandlungen/implantatbehandlung.html"
             },
 
             "tedaviler/ortodonti.html": {
                 en: "/EN/treatments/orthodontics.html",
-                de: "/DE/"
+                de: "/DE/behandlungen/kieferorthopadie.html"
             },
 
             "tedaviler/pediatri.html": {
                 en: "/EN/treatments/pediatrics.html",
-                de: "/DE/"
+                de: "/DE/behandlungen/kinderzahnbehandlung.html"
             },
 
             "tedaviler/pedodonti.html": {
                 en: "/EN/treatments/pedodontics.html",
-                de: "/DE/"
+                de: "/DE/behandlungen/padodontie.html"
             },
 
             "tedaviler/periodontoloji.html": {
                 en: "/EN/treatments/periodontology.html",
-                de: "/DE/"
+                de: "/DE/behandlungen/parodontologie.html"
             },
 
             "blog/blog.html": {
                 en: "/EN/blog/blog.html",
-                de: "/DE/"
+                de: "/DE/blog/blog.html"
             },
 
             "blog/dis-beyazlatma-ne-kadar-kalici.html": {
                 en: "/EN/blog/how-long-does-teeth-whitening-last.html",
-                de: "/DE/"
+                de: "/DE/blog/wie-dauerhaft-ist-eine-zahnaufhellung.html"
             },
 
             "blog/dis-implanti-tedavisi-ne-kadar-surer.html": {
                 en: "/EN/blog/how-long-does-dental-implant-treatment-take.html",
-                de: "/DE/"
+                de: "/DE/blog/wie-lange-dauert-eine-zahnimplantatbehandlung.html"
             },
 
             "blog/dis-koprusu-nedir-nasil-yapilir.html": {
                 en: "/EN/blog/what-is-a-dental-bridge-how-is-it-made.html",
-                de: "/DE/"
+                de: "/DE/blog/was-ist-eine-zahnbrucke-wie-wird-sie-hergestellt.html"
             },
 
             "blog/dis-tasi-nedir-nasil-temizlenir.html": {
                 en: "/EN/blog/what-is-dental-tartar-how-is-it-cleaned.html",
-                de: "/DE/"
+                de: "/DE/blog/was-ist-zahnstein-wie-reinige-ich-es.html"
             },
 
             "blog/lamine-dis-kaplama.html": {
                 en: "/EN/blog/dental-laminates.html",
-                de: "/DE/"
+                de: "/DE/blog/laminiertes-dentalfurnier.html"
             },
 
             "blog/porselen-dis-bakimi-nasil-yapilir.html": {
                 en: "/EN/blog/how-to-care-fot-porcelain-teeth.html",
-                de: "/DE/"
+                de: "/DE/blog/so-pflegen-sie-porzellanzahne.html"
             },
 
             "blog/protez-dis-nedir-nasil-yapilir.html": {
                 en: "/EN/blog/what-are-dentures-how-are-they-applied.html",
-                de: "/DE/"
+                de: "/DE/blog/was-ist-ein-prothesenzahn-wie-wird-es-angewendet.html"
             },
 
             "blog/zirkonyum-dis-kaplama-nedir-nasil-yapilir.html": {
                 en: "/EN/blog/what-is-zirkonium-dental-veneer-how-is-it-applied.html",
-                de: "/DE/"
+                de: "/DE/blog/was-ist-zirkonium-zahnveneer-wie-wird-es-angewendet.html"
             },
 
             "blog/zirkonyum-dis-ne-kadar-surede-yapilir.html": {
                 en: "/EN/blog/how-long-does-zirkonium-dental-application-take.html",
-                de: "/DE/"
+                de: "/DE/blog/wie-lange-dauert-die-zahnmedizinische-anwendung-von-zirkonium.html"
             }
         }
     },
