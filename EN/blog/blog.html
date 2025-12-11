@@ -1,9 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teeth House | Dental Clinic</title>
+    <title>Dental Health Blog | Teeth House | Dental Clinic</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Teeth House Dental Clinic | Your Dental Health Blog">
+    <meta name="description" content="Professional dental care tips, treatment guides, and oral health advice from Teeth House Dental Clinic. Learn about implants, veneers, whitening, and more.">
+    <meta name="keywords" content="dental clinic, dental blog, oral health, dental implants, lamina veneers, zirconium crowns, teeth whitening, dental prosthesis, Alanya dentist, Antalya dental clinic">
+    <meta name="author" content="Dt. Tahir KORKMAZ, Teeth House Dental Clinic">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.teethouse.com/EN/blog/blog.html">
+    <meta property="og:title" content="Teeth House Dental Health Blog | Expert Dental Care Tips">
+    <meta property="og:description" content="Comprehensive dental health blog with professional advice on implants, veneers, whitening, and oral hygiene from Teeth House Dental Clinic in Alanya.">
+    <meta property="og:image" content="https://www.teethouse.com/img/teethouse_logo_1.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="Teeth House Dental Clinic">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.teethouse.com/EN/blog/blog.html">
+    <meta property="twitter:title" content="Teeth House Dental Health Blog | Expert Dental Care Tips">
+    <meta property="twitter:description" content="Comprehensive dental health blog with professional advice on implants, veneers, whitening, and oral hygiene from Teeth House Dental Clinic in Alanya.">
+    <meta property="twitter:image" content="https://www.teethouse.com/img/teethouse_logo_1.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.teethouse.com/EN/blog/blog.html">
+
+    <!-- Alternate Languages (if you have multilingual content) -->
+    <link rel="alternate" hreflang="tr" href="https://www.teethouse.com/TR/blog/blog.html">
+    <link rel="alternate" hreflang="en" href="https://www.teethouse.com/EN/blog/blog.html">
+    <link rel="alternate" hreflang="de" href="https://www.teethouse.com/DE/blog/blog.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.teethouse.com/EN/blog/blog.html">
+
+    <!-- Structured Data / JSON-LD for better SEO -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Blog",
+            "name": "Teeth House Dental Health Blog",
+            "description": "Professional dental care blog with articles about oral health, treatments, and dental procedures",
+            "url": "https://www.teethouse.com/EN/blog/blog.html",
+            "publisher": {
+                "@type": "Dentist",
+                "name": "Teeth House Dental Clinic",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Avsallar Mahallesi Hamdi Cad. Meydan Konutları Sitesi B Blok No:2",
+                    "addressLocality": "Alanya",
+                    "addressRegion": "Antalya",
+                    "postalCode": "07410",
+                    "addressCountry": "TR"
+                },
+                "telephone": "+905441660707",
+                "image": "https://www.teethouse.com/img/teethouse_logo_1.png"
+            },
+            "author": {
+                "@type": "Person",
+                "name": "Dt. Tahir KORKMAZ"
+            },
+            "inLanguage": "en"
+        }
+    </script>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
@@ -17,15 +83,54 @@
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdTKBYsAAAAAGGYqF8m-wpi_bp1AFPzrt8I-LcA"></script>
 
     <style>
-        .blog-header { background-color: #01CD8C; color: white; padding: 3rem 1rem; text-align: center; }
-        .blog-card { transition: transform .2s ease, box-shadow .2s ease; }
-        .blog-card:hover { transform: translateY(-5px); box-shadow: 0 6px 20px rgba(0,0,0,.1); }
-        .blog-meta { font-size: .9rem; color: #6c757d; }
-        .sidebar .card { border: none; box-shadow: 0 2px 6px rgba(0,0,0,.05); }
-        .sidebar .card-title { font-size: 1.1rem; border-bottom: 2px solid #01CD8C; padding-bottom: .5rem; }
+        .blog-header {
+            background-color: #01CD8C;
+            color: white;
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .blog-card {
+            transition: transform .2s ease, box-shadow .2s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, .1);
+        }
+
+        .blog-meta {
+            font-size: .9rem;
+            color: #6c757d;
+        }
+
+        .sidebar .card {
+            border: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, .05);
+        }
+
+        .sidebar .card-title {
+            font-size: 1.1rem;
+            border-bottom: 2px solid #01CD8C;
+            padding-bottom: .5rem;
+        }
     </style>
 
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MS28HMQC');</script>
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MS28HMQC');
+    </script>
 </head>
 
 <body class="bg-custom-light">
@@ -332,4 +437,5 @@
 
     <a href="https://wa.me/905441660707" class="btn btn-success rounded-circle shadow d-flex align-items-center justify-content-center" target="_blank" style="position:fixed;bottom:80px;right:20px;width:60px;height:60px;z-index:999;"><i class="bi bi-whatsapp fs-4"></i></a>
 </body>
+
 </html>
