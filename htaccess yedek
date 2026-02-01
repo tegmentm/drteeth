@@ -1,0 +1,40 @@
+RewriteEngine On
+
+# HTTPS zorunlu
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+DirectoryIndex index.html
+
+# index.html → / (tüm diller)
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
+RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]
+
+# blog/blog.html → blog/ (tüm diller)
+RewriteCond %{THE_REQUEST} \s/+(.*/)?blog/blog\.html[\s?] [NC]
+RewriteRule ^(.*/)?blog/blog\.html$ /$1blog/ [R=301,L]
+
+# TR /blog/ içeriğini blog.html'den göster (rewrite)
+RewriteCond %{REQUEST_URI} ^/blog/?$ [NC]
+RewriteRule ^blog/?$ /blog/blog.html [L]
+
+# EN & DE /blog/ içeriğini blog.html'den göster (rewrite)
+RewriteCond %{REQUEST_URI} ^/(EN|DE)/blog/?$ [NC]
+RewriteRule ^(EN|DE)/blog/?$ /$1/blog/blog.html [L]
+
+# tedaviler/tedaviler.html → tedaviler/ (tüm diller)
+RewriteCond %{THE_REQUEST} \s/+(.*/)?(tedaviler|treatments|behandlungen)/(tedaviler|treatments|behandlungen)\.html[\s?] [NC]
+RewriteRule ^(.*/)?(tedaviler|treatments|behandlungen)/(tedaviler|treatments|behandlungen)\.html$ /$1$2/ [R=301,L]
+
+# TR /tedaviler/ içeriğini tedaviler.html'den göster
+RewriteCond %{REQUEST_URI} ^/tedaviler/?$ [NC]
+RewriteRule ^tedaviler/?$ /tedaviler/tedaviler.html [L]
+
+# EN /treatments/ içeriğini treatments.html'den göster
+RewriteCond %{REQUEST_URI} ^/EN/treatments/?$ [NC]
+RewriteRule ^EN/treatments/?$ /EN/treatments/treatments.html [L]
+
+# DE /behandlungen/ içeriğini behandlungen.html'den göster
+RewriteCond %{REQUEST_URI} ^/DE/behandlungen/?$ [NC]
+RewriteRule ^DE/behandlungen/?$ /DE/behandlungen/behandlungen.html [L]
+

@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Teeth House | Dental Clinic</title>
+    <title>Experienced Team at Teethouse Dental Clinic</title>
+
+    <meta name="description" content="Discover the expert dental team at Teethouse Dental Clinic in Alanya, featuring experienced dentists committed to high-quality, patient-centered dental care.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://teethouse.com/EN/team.html" />
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -19,24 +24,101 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 
     <!-- CSS Connection -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
     <!-- Recaptcha Connection -->
     <script src="https://www.google.com/recaptcha/enterprise.js?render=6LdTKBYsAAAAAGGYqF8m-wpi_bp1AFPzrt8I-LcA"></script>
 
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [{
+                    "@type": "MedicalOrganization",
+                    "@id": "https://teethouse.com/#organization",
+                    "name": "Teethouse Oral and Dental Health Clinic",
+                    "url": "https://teethouse.com",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Alanya",
+                        "addressRegion": "Antalya",
+                        "addressCountry": "TR"
+                    }
+                },
+                {
+                    "@type": "Dentist",
+                    "@id": "https://teethouse.com/#tahir-korkmaz",
+                    "name": "Tahir Korkmaz",
+                    "image": "https://teethouse.com/img/tahir.png",
+                    "jobTitle": "Dentist",
+                    "worksFor": {
+                        "@id": "https://teethouse.com/#organization"
+                    },
+                    "alumniOf": {
+                        "@type": "CollegeOrUniversity",
+                        "name": "Istanbul University Faculty of Dentistry"
+                    }
+                },
+                {
+                    "@type": "Dentist",
+                    "@id": "https://teethouse.com/#yasin-aydin",
+                    "name": "Yasin Aydin",
+                    "image": "https://teethouse.com/img/yasin.png",
+                    "jobTitle": "Dentist",
+                    "worksFor": {
+                        "@id": "https://teethouse.com/#organization"
+                    },
+                    "alumniOf": {
+                        "@type": "CollegeOrUniversity",
+                        "name": "Istanbul University Faculty of Dentistry"
+                    }
+                },
+                {
+                    "@type": "Dentist",
+                    "@id": "https://teethouse.com/#nesibe-nergis-turhal",
+                    "name": "Nesibe Nergis Turhal",
+                    "image": "https://teethouse.com/img/nesibe.png",
+                    "jobTitle": "Dentist",
+                    "worksFor": {
+                        "@id": "https://teethouse.com/#organization"
+                    },
+                    "alumniOf": {
+                        "@type": "CollegeOrUniversity",
+                        "name": "Ankara Yildirim Beyazit University Faculty of Dentistry"
+                    }
+                }
+            ]
+        }
+    </script>
 
-<!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MS28HMQC');</script>
+
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MS28HMQC');
+    </script>
     <!-- End Google Tag Manager -->
 
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+<link rel="manifest" href="/favicon/site.webmanifest">
 </head>
 
 <body>
-    
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MS28HMQC" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -46,7 +128,7 @@
         <div class="container">
             <!-- Logo (left aligned) -->
             <a class="navbar-brand" href="#">
-                <img src="../img/teethouse_logo_1.png" alt="Logo">
+                <img src="/img/teethouse_logo_1.png" alt="Logo">
             </a>
 
             <!-- Mobile menu button -->
@@ -68,7 +150,7 @@
                         <i class="bi bi-calendar-check"></i> Make an Appointment
                     </a>
                 </div>
-                
+
                 <!-- Language Switcher Start -->
                 <div class="lang-toggle d-flex justify-content-center mt-2 mt-md-0 ms-0 ms-md-3">
                     <select id="languageSelect">
@@ -78,7 +160,7 @@
                     </select>
                 </div>
                 <!-- Language Switcher End -->
-                
+
             </div>
         </div>
     </nav>
@@ -86,7 +168,7 @@
     <!-- Content section -->
     <main class="container-fluid my-1">
         <div class="row">
-            <div class="col-12 py-4" style="background-image: url(../img/hexagons-background-left.png); background-position: left bottom; background-repeat: no-repeat;">
+            <div class="col-12 py-4" style="background-image: url(/img/hexagons-background-left.png); background-position: left bottom; background-repeat: no-repeat;">
                 <div class="d-flex gap-2 mb-3">
                     <span class="badge rounded-pill text-bg-light border fw-medium">
                         <i class="bi bi-arrow-bar-right me-1"></i> Our Team
@@ -107,7 +189,7 @@
         <!-- Tahir KORKMAZ -->
         <div class="row g-0 align-items-stretch my-4 shadow-lg rounded dentist-card">
             <div class="col-md-5 p-0 dentist-img-container bg-custom-light d-flex flex-column">
-                <img src="../img/tahir.png" class="dentist-img align-self-end" alt="Tahir Korkmaz">
+                <img src="/img/tahir.png" class="dentist-img align-self-end" alt="Tahir Korkmaz">
             </div>
 
             <div class="col-md-7">
@@ -130,14 +212,14 @@
             </div>
 
             <div class="col-md-5 p-0 order-md-2 order-1 dentist-img-container bg-custom-light">
-                <img src="../img/yasin.png" alt="Yasin Aydın" class="dentist-img">
+                <img src="/img/yasin.png" alt="Yasin Aydın" class="dentist-img">
             </div>
         </div>
 
         <!-- Nesibe Nergis TURHAL -->
         <div class="row g-0 align-items-stretch my-4 shadow-lg rounded dentist-card">
             <div class="col-md-5 p-0 dentist-img-container bg-custom-light d-flex flex-column">
-                <img src="../img/nesibe.png" class="dentist-img align-self-end" alt="Nesibe Nergis TURHAL">
+                <img src="/img/nesibe.png" class="dentist-img align-self-end" alt="Nesibe Nergis TURHAL">
             </div>
 
             <div class="col-md-7">
@@ -184,7 +266,7 @@
                     <div>
                         <h5>Email</h5>
                         <p class="mb-0">
-                            <a href="mailto:contact@teethouse.com" class="text-decoration-none color-inherit">iletisim@teethouse.com</a><br>
+                            <a href="mailto:iletisim@teethouse.com" class="text-decoration-none color-inherit">iletisim@teethouse.com</a><br>
                         </p>
                     </div>
                 </div>
@@ -287,7 +369,7 @@
         }
     </script>
     <!-- Recaptcha Scripts End -->
-    
+
     <script src="/js/lang-map.js"></script>
     <script src="/js/main.js"></script>
 
