@@ -27,6 +27,11 @@ const langMap = {
                 en: "/EN/treatments/treatments.html",
                 de: "/DE/behandlungen/behandlungen.html"
             },
+            
+            "tedaviler/": {
+                en: "/EN/treatments/treatments.html",
+                de: "/DE/behandlungen/behandlungen.html"
+            },
 
             "tedaviler/dis-poliklinigi.html": {
                 en: "/EN/treatments/dental-polyclinic.html",
@@ -61,6 +66,11 @@ const langMap = {
             "blog/blog.html": {
                 en: "/EN/blog/blog.html",
                 de: "/DE/blog/blog.html"
+            },
+            
+            "blog/": {
+                en: "/EN/blog/",
+                de: "/DE/blog/"
             },
 
             "blog/dis-beyazlatma-ne-kadar-kalici.html": {
@@ -138,6 +148,11 @@ const langMap = {
                 tr: "/tedaviler/tedaviler.html",
                 de: "/DE/behandlungen/behandlungen.html"
             },
+            
+            "treatments/": {
+                tr: "/tedaviler/",
+                de: "/DE/behandlungen/"
+            },
 
             "treatments/dental-polyclinic.html": {
                 tr: "/tedaviler/dis-poliklinigi.html",
@@ -172,6 +187,11 @@ const langMap = {
             "blog/blog.html": {
                 tr: "/blog/blog.html",
                 de: "/DE/blog/blog.html"
+            },
+            
+            "blog/": {
+                tr: "/blog/",
+                de: "/DE/blog/"
             },
 
             "blog/how-long-does-teeth-whitening-last.html": {
@@ -251,6 +271,11 @@ const langMap = {
                 en: "/EN/treatments/treatments.html"
             },
             
+            "behandlungen/": {
+                tr: "/tedaviler/",
+                en: "/EN/treatments/"
+            },
+            
             "behandlungen/zahnpoliklinik.html": {
                 tr: "/tedaviler/dis-poliklinigi.html",
                 en: "/EN/treatments/dental-polyclinic.html"
@@ -284,6 +309,11 @@ const langMap = {
             "blog/blog.html": {
                 tr: "/blog/blog.html",
                 en: "/EN/blog/blog.html"
+            },
+            
+            "blog/": {
+                tr: "/blog/",
+                en: "/EN/blog/"
             },
             
             "blog/wie-dauerhaft-ist-eine-zahnaufhellung.html": {
