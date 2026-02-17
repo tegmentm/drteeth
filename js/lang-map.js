@@ -183,6 +183,11 @@ const langMap = {
                 tr: "/tedaviler/periodontoloji.html",
                 de: "/DE/behandlungen/parodontologie.html"
             },
+            
+            "treatments/zirconium-crown.html": {
+                tr: "/tedaviler/tedaviler.html",
+                de: "/DE/behandlungen/zirkonkrone.html"
+            },
 
             "blog/blog.html": {
                 tr: "/blog/blog.html",
@@ -304,6 +309,11 @@ const langMap = {
             "behandlungen/parodontologie.html": {
                 tr: "/tedaviler/periodontoloji.html",
                 en: "/EN/treatments/periodontology.html"
+            },
+            
+            "behandlungen/zirkonkrone.html": {
+                tr: "/tedaviler/tedaviler.html",
+                en: "/EN/treatments/zirconium-crown.html"
             },
             
             "blog/blog.html": {
